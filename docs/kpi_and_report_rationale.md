@@ -1,0 +1,46 @@
+# KPI And Report Rationale
+
+Generated: 2026-07-17 20:27
+
+This section explains the KPIs and reports used in the Leatt Fabric BI/ML portfolio. The goal is to show not only what was measured, but why it matters, what it signals, and which business action it should trigger.
+
+## KPI Catalog
+
+| domain | kpi | current_value_or_status | definition | why_used | what_it_signals | business_action | report_placement |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Executive | Net Revenue | R3,994,247,413 | Sum of transaction net revenue after discounts and excluding returns. | Top-line demand is the first board-level signal of commercial scale. | Growth or contraction in market demand, product-market fit and campaign reach. | Investigate by month, category, channel and province; protect supply for demand peaks. | Executive Overview, Monthly Trend, AI Command Center |
+| Executive | Gross Margin | R1,938,497,252 | Revenue less modeled product cost and fulfillment economics. | Revenue without margin can destroy value; margin shows the quality of growth. | Whether the business is buying growth too expensively or selling profitable baskets. | Prioritize margin-positive bundles, pricing reviews and channel mix changes. | Executive Overview, Category KPI, Product KPI |
+| Executive | Gross Margin Rate | 48.5% | Gross margin divided by net revenue. | Normalizes margin so categories and channels can be compared fairly. | Margin compression, discount overuse, poor channel economics or weak product mix. | Tighten discount rules, promote higher-margin products, renegotiate COGS assumptions. | Executive Overview, Category KPI, Finance Pack |
+| Customer | Average Order Value | R2,756 | Net revenue divided by distinct orders. | AOV shows basket depth and upsell effectiveness. | Whether customers are buying single items or building richer baskets. | Launch bundles, recommendations, threshold offers and accessory attach campaigns. | Marketing Report, A/B Testing, AI Command Center |
+| Operations | Return Rate | 4.9% | Return amount divided by net revenue. | Returns are direct margin leakage and a customer-experience signal. | Fit/sizing issues, unclear PDP content, damaged delivery, buyer remorse or quality issues. | Improve size guides, PDP detail, reviews, post-purchase education and exception reporting. | ML Monitoring, Accounting Governance, COO Watchlist |
+| Merchandising | Hero Category Revenue | Apparel (R1,759,430,045) | Highest revenue category in the modeled catalog and transaction estate. | Shows which category deserves executive attention and protected availability. | Where customer demand is concentrated and where stockouts would hurt most. | Protect inventory, create SEO hubs, develop bundles and track category share monthly. | Category KPI, SEO Roadmap, Executive Dossier |
+| Marketing | Channel ROAS | Direct (100.0x ROAS) | Revenue divided by estimated channel spend. | ROAS controls media efficiency and prevents scaling unprofitable traffic. | Which acquisition journeys are efficient versus experimental or wasteful. | Scale high-ROAS journeys; constrain low-ROAS spend until creative and landing pages improve. | Marketing ROI, Channel Intelligence, A/B Test Pack |
+| Marketing | A/B Test Uplift | Included in experiment sheets | Difference in conversion, AOV or margin between control and variant. | Testing separates opinion from evidence before using Azure credit or media budget. | Whether a bundle, threshold, copy or landing-page change creates measurable lift. | Roll out significant winners; keep inconclusive tests as learning only. | A/B Test Results, Growth Marketing Report |
+| ML | Return-Risk AUC | 0.589 | Area under ROC curve for the return-risk classifier. | AUC measures ranking quality across thresholds. | Whether the model can separate risky orders from normal orders better than chance. | Use as a watchlist and improve with real return reasons, sizing and delivery signals. | ML Monitoring, AI Command Center |
+| ML | Return-Risk Recall | 0.718 | Share of actual return-risk cases captured by the model. | For operations, missing risky returns is usually worse than reviewing extra orders. | How much return exposure can be surfaced early. | Route high-risk cohorts to PDP fixes, customer education and service follow-up. | ML Monitoring, Product Watchlist |
+| Finance | VAT Reconciliation | Included in finance pack | Compares ecommerce sales/refunds/VAT to SAP or accounting postings. | Finance needs provable close controls, not only dashboard totals. | Unposted refunds, settlement timing gaps, VAT exceptions or account mapping issues. | Create exception owners and include reconciliations in monthly close evidence. | Accounting Governance Pack, SAP Mapping |
+| Governance | Row Count Control | 2,000,000 | Source and target row counts for uploaded files, tables and semantic model inputs. | A simple but powerful audit control that catches missing or duplicated loads. | Pipeline completeness, accidental truncation, duplicate loads or stale extracts. | Block refresh promotion when row counts deviate outside tolerance. | Fabric Proof, Source Register, Governance Scorecard |
+| Governance | Source Lineage | Documented | Maps website, generated data, Fabric paths, Power BI model, reports and Git commits. | Lineage makes the work auditable and interview-proof. | Whether a KPI can be traced back to a reliable source and transformation route. | Publish lineage with every report refresh and monthly close pack. | Source Register, Git Proof, Completion Report |
+| Platform | Fabric Capacity State | Paused after handover | Azure Fabric F2 capacity running or paused state. | Cloud cost control is part of senior BI ownership. | Whether proof infrastructure is still consuming Azure credit. | Resume only for refresh/demo; suspend after review. | Cost Handover, Final Completion Report |
+
+## Report Catalog
+
+| report | audience | primary_kpis | why_this_report_exists | how_to_use_it |
+| --- | --- | --- | --- | --- |
+| Executive Overview | CEO, CFO, Head of Ecommerce | Revenue, margin, AOV, return rate, monthly trend, hero categories | Gives the quickest health check of scale, profitability and trading momentum. | Use first in interviews and board-style walkthroughs. |
+| AI Commerce Command Center | Executive team, BI Ops, Marketing, Merchandising | Next-best actions, agents, anomalies, category roles, channel efficiency | Shows the shift from passive reporting to intelligent operating rhythm. | Use to explain how AI agents can turn BI signals into actions. |
+| ML Return-Risk Monitoring | COO, Customer Experience, BI/ML team | AUC, recall, risk bands, risky categories/products | Demonstrates applied ML and shows where return leakage can be attacked. | Use to position model as a watchlist, not a perfect oracle. |
+| Marketing Growth Report | CMO, Performance Marketing | ROAS, A/B uplift, SEO roadmap, competitor comparison, campaign calendar | Connects BI to revenue growth and Azure-credit discipline. | Use to justify scaling only after tests prove lift. |
+| Accounting Governance Pack | CFO, Finance Manager, Auditor | VAT, refunds, journal entries, SAP mapping, exceptions | Shows accounting-grade reconciliation, not just analytics storytelling. | Use to prove finance, SAP BW/SAP B1 and audit readiness. |
+| ERD And Fabric Deployment Report | Data Architect, BI Lead, Hiring Manager | Star schema, table grain, relationships, OneLake paths, pipeline proof | Explains how the data model is built and why it can scale. | Use to demonstrate senior architecture thinking. |
+| Power BI Screenshot Pack | Hiring Manager, Portfolio Reviewer | Executive, ML and marketing proof screenshots | Provides visual evidence even if the live tenant is not open. | Use as quick proof in applications, interviews and email follow-ups. |
+| Final Executive Dossier | All stakeholders | Concise end-to-end story, screenshots, KPIs, handover and cost control | A leave-behind that consolidates the whole project into one polished artifact. | Use as the main portfolio attachment. |
+
+## Design Principle
+
+The project avoids vanity metrics. Every KPI must answer one of four business questions:
+
+- Are we growing?
+- Are we growing profitably?
+- Where is leakage or risk?
+- What action should the business take next?
