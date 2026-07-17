@@ -13,7 +13,7 @@ This project is now a complete senior BI portfolio case study: website extractio
 - Uploaded the data estate to Microsoft Fabric OneLake under the `Apollis` workspace and `Leatt_BI_ML_Lakehouse`.
 - Created a Fabric Data Factory pipeline item and Power BI semantic model proof.
 - Built Excel/PDF/eBook deliverables, evidence screenshots, ERD, data governance register, accounting reconciliation pack and AI command-center layer.
-- Pushed the Git proof package to GitHub: `https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof`.
+- Pushed the Git delivery package to GitHub: `https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof`.
 
 ## What the data tells us
 

@@ -1,6 +1,6 @@
 # Leatt Fabric BI, ML and Growth Analytics Case Study
 
-This repository is a Git-ready proof package for an end-to-end ecommerce analytics project built around the Leatt ZA public ecommerce catalog.
+This repository is a Git-ready delivery package for an end-to-end ecommerce analytics project built around the Leatt ZA public ecommerce catalog.
 
 Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof
 
@@ -28,7 +28,7 @@ It demonstrates:
 - A/B testing and marketing ROI analysis.
 - Competitor and SEO analysis.
 - Microsoft Fabric / Azure Data Factory implementation planning.
-- Evidence screenshots and portfolio-ready reports.
+- Evidence screenshots and delivery-ready reports.
 
 ## What is included in Git
 
@@ -43,7 +43,7 @@ It demonstrates:
 - `src/add_kpi_rationale_layer.py`: reproducible KPI/report rationale generator.
 - `src/finalize_leatt_project.py`: final dossier/deck/index/handover pack generator.
 - `docs/`: architecture, Azure/Fabric export, Git proof, and source-control instructions.
-- `artifacts/reports/`: portfolio-ready Excel/PDF reports.
+- `artifacts/reports/`: delivery-ready Excel/PDF reports.
 - `artifacts/data_samples/`: small CSV samples, source register, and manifests.
 - `artifacts/evidence_images/`: screenshots and process diagrams.
 
