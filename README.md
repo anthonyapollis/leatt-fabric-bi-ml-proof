@@ -53,3 +53,9 @@ Get-ChildItem artifacts/evidence_images
 ```
 
 Generated on 2026-07-17 17:06.
+
+## Senior BI Developer Role Alignment
+
+This repository now includes a role-alignment pack for a Senior Business Intelligence Developer position covering Microsoft Fabric, Azure Data Factory, Power BI, SQL, DAX, Python, AI-driven BI, governance, SAP/accounting integration, stakeholder consulting and training.
+
+See `docs/SENIOR_BI_DEVELOPER_JOB_ALIGNMENT.md`.

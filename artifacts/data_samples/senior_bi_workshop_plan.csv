@@ -1,0 +1,7 @@
+Session,Theme,Purpose,Audience
+Session 1,Business briefing,"Walk through executive KPIs, growth levers and stakeholder questions.","Executives, sales, finance"
+Session 2,Data platform,"Explain Fabric, Data Factory, Lakehouse, Warehouse, Power BI and Git export flow.",BI/data team
+Session 3,Model and DAX,"Review star schema, DAX measures, semantic model and report pages.",Power BI developers
+Session 4,ML and AI,"Review propensity, segmentation, forecast, recommender and AI assistant roadmap.",Analytics/AI team
+Session 5,Finance and governance,"Review VAT, GL reconciliation, SAP source mapping, audit exceptions and controls.","Finance, audit, governance"
+Session 6,Handover,"Review repo, scripts, manifests, deployment checklist, owner matrix and next backlog.",Project team

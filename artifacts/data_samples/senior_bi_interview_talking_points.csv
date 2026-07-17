@@ -1,0 +1,8 @@
+Topic,Talking point
+Opening summary,"I built a full ecommerce BI and ML case study around Leatt ZA, starting from live platform research and public catalog extraction, then created a million-row fact model, Power BI-ready measures, ML scoring, finance reconciliation, governance and Git proof."
+Fabric architecture,"I would deploy this into Fabric using Data Factory for REST ingestion, OneLake/Lakehouse for Bronze and Silver, Warehouse or SQL endpoint for Gold, Power BI Direct Lake for reporting and Fabric Data Science for scoring."
+Business value,"The project moves beyond dashboards: it includes A/B testing, marketing ROI, SEO, competitor research, AI use cases, VAT reconciliation, audit controls and SAP integration design."
+Governance,"I built a source register, data controls, audit exception register, PII minimization notes, row-count proof and Git-controlled documentation to make the solution auditable."
+SAP and ecommerce,"The live site appears to run on Shopify. SAP Commerce Cloud/Hybris is not evidenced for this storefront, but SAP Business One or SAP BW can be used as finance/accounting sources of record."
+Scale proof,"The generated warehouse has 2,000,000 transaction rows, 180,000 customers and 11,354 product variants, with proof docs and file hashes where practical."
+Leadership,"The deliverable is structured so a team can extend it: scripts, Git history, export docs, control matrix, architecture diagrams and workshop materials."
