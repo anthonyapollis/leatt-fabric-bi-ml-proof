@@ -59,6 +59,8 @@ This project is now a complete senior BI portfolio case study: website extractio
 
 ## Cost and handover
 
+Final handover status on 2026-07-17: Fabric F2 capacity `leattfabricf2` was suspended and verified as `Paused`.
+
 Suspend Fabric capacity when review is complete:
 
 ```powershell

@@ -2,6 +2,8 @@
 
 The Fabric F2 capacity is the main ongoing cost item. Keep it running only while proving or refreshing the project.
 
+Final handover status on 2026-07-17: `leattfabricf2` verified as `Paused` in Azure CLI after project completion.
+
 Suspend:
 
 ```powershell
