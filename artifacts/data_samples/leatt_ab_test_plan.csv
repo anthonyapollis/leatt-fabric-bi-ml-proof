@@ -1,0 +1,7 @@
+Test,Surface,Hypothesis,Primary KPIs,Audience,Duration,Recommended visitors,Priority
+Eyewear PDP hero,Lifestyle eyewear page,Replace generic grid-first experience with rider-use-case hero and lens benefit copy.,"Conversion rate, add-to-cart rate, AOV",Sunglasses SpeedViz/RideViz/TheViz collection,14 days,26000,High
+Bundle offer,Moto + MTB protective gear,Show helmet + goggle + glove bundle saving at cart and PDP.,"AOV, margin per visitor, attach rate",Helmet/Goggle/Glove buyers,21 days,42000,Very high
+Free shipping threshold,Checkout/cart,Test R1000 threshold message vs dynamic 'Rxxx away from free shipping' progress bar.,"Cart conversion, shipping abandonment",All cart sessions,14 days,36000,High
+Email lifecycle,CRM,VIP early-access drop vs standard new-arrivals newsletter.,"Click-through, revenue per email, unsubscribe",VIP/Retain ML segments,10 days,60000,Very high
+SEO landing page,Organic search,Create 'best MTB goggles South Africa' guide with product cards and comparison copy.,"Organic clicks, assisted revenue, scroll depth",Non-brand search visitors,30 days,18000,Medium
+AI recommendation widget,PDP/cart,Next-best-category recommendations using ML segment and product affinity.,"Attach rate, margin per visitor",Returning visitors,21 days,30000,Very high

@@ -1,0 +1,8 @@
+AI use case,Description,Business value,Complexity,Success metric
+AI product recommender,"Next-best-product and bundle recommendations by rider type, product affinity, and ML segment.",High,Medium,"AOV, attach rate, margin per visitor"
+AI search and fit assistant,"Conversational guide for boots, goggles, braces, and protection fit.",High,Medium,"Conversion rate, return rate, support deflection"
+Review intelligence,"Summarize reviews/support tickets into quality, sizing, and expectation issues.",Medium,Low,"Return rate, product copy improvement backlog"
+Creative testing copilot,Generate paid social/email variants and tag performance outcomes.,Medium,Low,"CTR, CVR, creative fatigue"
+Demand forecasting,Forecast category demand and peak-season inventory pressure.,High,Medium,"Stockout risk, inventory turns, revenue capture"
+SEO content generator with guardrails,"Draft buyer guides, FAQs, comparison pages, and schema markup from approved product data.",Medium,Low,"Organic clicks, assisted revenue"
+Fraud/returns anomaly monitor,"Detect unusual return, refund, or payment patterns.",Medium,Medium,"Refund leakage, operational risk"

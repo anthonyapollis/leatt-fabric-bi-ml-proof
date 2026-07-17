@@ -1,0 +1,22 @@
+# Large generated data
+*.parquet
+*.sqlite
+*.db
+leatt_customer_ml_scores.csv
+leatt_product_catalog.csv
+leatt_synthetic_customers.csv
+
+# Local environments
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets and local config
+secrets.*
+*.key
+*.pem
+*.pfx
+
+# Office temp files
+~$*

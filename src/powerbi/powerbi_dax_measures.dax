@@ -1,0 +1,44 @@
+-- Core Power BI measures for the Leatt ecommerce semantic model
+
+Net Revenue = SUM('Fact Transaction Lines'[net_revenue_zar])
+
+Gross Revenue = SUM('Fact Transaction Lines'[gross_revenue_zar])
+
+Gross Margin = SUM('Fact Transaction Lines'[gross_margin_zar])
+
+Gross Margin % = DIVIDE([Gross Margin], [Net Revenue])
+
+Units Sold = SUM('Fact Transaction Lines'[quantity])
+
+Discount Amount = SUM('Fact Transaction Lines'[discount_amount_zar])
+
+Discount % = DIVIDE([Discount Amount], [Gross Revenue])
+
+Return Value = SUM('Fact Transaction Lines'[return_amount_zar])
+
+Return Value % = DIVIDE([Return Value], [Net Revenue])
+
+Orders = DISTINCTCOUNT('Fact Transaction Lines'[order_id])
+
+Customers = DISTINCTCOUNT('Fact Transaction Lines'[customer_id])
+
+Average Order Value = DIVIDE([Net Revenue], [Orders])
+
+Average Selling Price = DIVIDE([Net Revenue], [Units Sold])
+
+Revenue YoY % =
+VAR CurrentRevenue = [Net Revenue]
+VAR PriorRevenue = CALCULATE([Net Revenue], SAMEPERIODLASTYEAR('Dim Date'[Date]))
+RETURN DIVIDE(CurrentRevenue - PriorRevenue, PriorRevenue)
+
+High Propensity Customers =
+CALCULATE(
+    DISTINCTCOUNT('Customer Scores'[customer_id]),
+    'Customer Scores'[repurchase_propensity] >= 0.70
+)
+
+VIP Revenue =
+CALCULATE(
+    [Net Revenue],
+    'Customer Scores'[ml_segment] = "VIP"
+)

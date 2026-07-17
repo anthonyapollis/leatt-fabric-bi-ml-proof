@@ -1,0 +1,33 @@
+Asset,File,Description
+Product catalog,leatt_product_catalog.csv,"11,354 variants extracted from https://za.leatt.com/products.json"
+Synthetic customers,leatt_synthetic_customers.csv,"180,000 customers"
+Transactional parquet,leatt_ecommerce_transactions_2m.parquet,"2,000,000 transaction lines"
+SQLite warehouse,leatt_ecommerce_warehouse.sqlite,"dimensional tables, fact table, and aggregations"
+Excel BI/ML report,leatt_ecommerce_bi_ml_report.xlsx,summary workbook with charts and model outputs
+PDF ebook,leatt_ecommerce_bi_ml_ebook.pdf,executive BI and ML narrative report
+Customer ML scores,leatt_customer_ml_scores.csv,customer-level value and propensity scores
+Revenue forecast,leatt_revenue_forecast.csv,six-month forecast
+Fabric guide,fabric_powerbi_implementation_guide.md,Azure Fabric and Power BI implementation guide
+DAX measures,powerbi_dax_measures.dax,starter Power BI semantic model measures
+Excel BI/ML report with evidence,leatt_ecommerce_bi_ml_report_with_evidence.xlsx,"Original workbook plus source register, Azure process proof, and imported screenshots."
+PDF ebook with evidence,leatt_ecommerce_bi_ml_ebook_with_evidence.pdf,Original ebook plus consolidated source/evidence addendum.
+Evidence addendum,evidence_addendum.pdf,Standalone evidence and screenshot PDF.
+Consolidated source register CSV,consolidated_source_register.csv,Machine-readable source register.
+Consolidated source register Markdown,consolidated_source_register.md,Human-readable source register.
+Azure/Fabric process diagram,fabric_data_factory_pipeline_blueprint.png,Generated process blueprint image for portfolio proof.
+leatt_growth_ai_marketing_pack,leatt_growth_ai_marketing_pack.xlsx,"Growth workbook covering A/B testing, marketing ROI, competitor analysis, SEO, AI and Azure credit plan."
+leatt_ecommerce_bi_ml_report_full_growth_evidence,leatt_ecommerce_bi_ml_report_full_growth_evidence.xlsx,"Master Excel report with BI, ML, evidence, growth, SEO, AI and A/B testing sheets."
+leatt_growth_ai_marketing_report,leatt_growth_ai_marketing_report.pdf,"Portfolio PDF for growth, marketing, SEO, competitor and AI strategy."
+leatt_ab_test_plan,leatt_ab_test_plan.csv,Growth/marketing/AI output asset.
+leatt_ab_test_results,leatt_ab_test_results.csv,Growth/marketing/AI output asset.
+leatt_marketing_roi,leatt_marketing_roi.csv,Growth/marketing/AI output asset.
+leatt_competitor_analysis,leatt_competitor_analysis.csv,Growth/marketing/AI output asset.
+leatt_seo_roadmap,leatt_seo_roadmap.csv,Growth/marketing/AI output asset.
+leatt_ai_roadmap,leatt_ai_roadmap.csv,Growth/marketing/AI output asset.
+leatt_azure_credit_plan,leatt_azure_credit_plan.csv,Growth/marketing/AI output asset.
+leatt_campaign_calendar,leatt_campaign_calendar.csv,Growth/marketing/AI output asset.
+ab_test_margin_opportunity,ab_test_margin_opportunity.png,Growth/marketing/AI output asset.
+marketing_roas,marketing_roas.png,Growth/marketing/AI output asset.
+seo_priority_mix,seo_priority_mix.png,Growth/marketing/AI output asset.
+competitor_positioning,competitor_positioning.png,Growth/marketing/AI output asset.
+leatt_lifestyle_eyewear_collection,leatt_lifestyle_eyewear_collection.png,Growth/marketing/AI output asset.

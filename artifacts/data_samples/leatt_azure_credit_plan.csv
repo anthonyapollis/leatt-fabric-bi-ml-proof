@@ -1,0 +1,8 @@
+Timing,Azure/Fabric activity,Deliverable,Credit use level
+Day 1,Create Fabric trial/capacity or use Azure F SKU only after approval.,"Confirm workspace, capacity admin, region, budget alert.",No spend until approved
+Day 1,Lakehouse + OneLake landing zone,"Upload parquet, customer scores, catalog CSV, source register.",Low
+Day 2,Data Factory pipeline,"REST product JSON copy, parquet load, scheduled refresh, basic monitoring.",Low/Medium
+Day 2,Warehouse/semantic model,Create gold star schema and Power BI measures from supplied DAX.,Low
+Day 3,Power BI Direct Lake report,"Executive, product, marketing, A/B, SEO, AI, ML monitor pages.",Medium
+Day 3,Fabric Data Science notebook,Train propensity and forecast models; register model outputs.,Medium
+Ongoing,Cost control,"Pause capacity when idle, monitor Fabric Capacity Metrics, export cost report.",Critical

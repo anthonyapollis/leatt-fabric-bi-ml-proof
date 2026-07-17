@@ -1,0 +1,19 @@
+source,url,type,used_for
+Leatt ZA product JSON,https://za.leatt.com/products.json,Public ecommerce catalog endpoint,"Product, variant, price, SKU, availability, tags, category classification seed."
+Leatt ZA About Us,https://za.leatt.com/pages/about-us,Public website page,Brand and business context in the ebook narrative.
+Leatt ZA Moto Boots collection,https://za.leatt.com/collections/moto-boots,Public website page and user screenshot,Visual proof of product assortment/pricing and portfolio evidence.
+Microsoft Fabric Data Factory documentation,https://learn.microsoft.com/en-us/fabric/data-factory/,Official Microsoft documentation,"Fabric ingestion, transformation, and orchestration process design."
+Azure Data Factory documentation,https://learn.microsoft.com/en-us/azure/data-factory/,Official Microsoft documentation,Azure ETL/data integration positioning and ADF process evidence.
+Azure Data Factory Copy Activity overview,https://learn.microsoft.com/en-us/azure/data-factory/copy-activity-overview,Official Microsoft documentation,Copy activity pattern for source-to-cloud movement.
+Microsoft Fabric OneLake overview,https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview,Official Microsoft documentation,Unified data lake and OneLake architecture explanation.
+Microsoft Fabric Lakehouse overview,https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview,Official Microsoft documentation,"Lakehouse, Delta, Spark/SQL, Power BI integration design."
+Microsoft Fabric subscription / Azure F SKUs,https://learn.microsoft.com/en-us/fabric/enterprise/buy-subscription,Official Microsoft documentation,Confirming Fabric capacity can be purchased through Azure portal.
+Power BI Direct Lake overview,https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-overview,Official Microsoft documentation,Power BI semantic model design for high-volume Delta tables in OneLake.
+Generated synthetic ecommerce transactions,outputs/leatt_ecommerce_transactions_2m.parquet,Generated dataset,"Million-row transaction fact table for BI/ML modeling; synthetic, not Leatt actual sales."
+Generated SQLite warehouse,outputs/leatt_ecommerce_warehouse.sqlite,Generated local warehouse,"Dimensional model, fact table, and BI aggregations."
+Fox Racing Moto Gear,https://www.foxracing.com/moto.html,Competitor official site,Competitor category and positioning analysis.
+Fox Racing MTB Gear,https://www.foxracing.com/mtb.html,Competitor official site,Competitor MTB category analysis.
+100% Goggles,https://www.100percent.com/pages/100-goggles,Competitor official site,Eyewear/goggle positioning analysis.
+Oakley MX Goggles,https://www.oakley.com/en-us/category/goggles/motocross,Competitor official site,Optics and motocross eyewear positioning.
+SCOTT MTB Goggles,https://www.scott-sports.com/us/en/products/bike-equipment-mw-goggles,Competitor official site,Goggle product/pricing range comparison.
+Leatt eyewear screenshot,outputs/evidence_images/leatt_lifestyle_eyewear_collection.png,User-provided screenshot,Evidence for eyewear product and pricing context.
