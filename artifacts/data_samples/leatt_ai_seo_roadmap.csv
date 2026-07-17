@@ -1,0 +1,8 @@
+timeframe,workstream,action,owner,expected_outcome
+0-2 weeks,Technical audit,"Validate Product/ProductGroup schema, sitemap canonicals, index coverage, rendered HTML and Merchant Center feed health.",SEO/Data Engineering,"Blockers list with severity, owner and fix path."
+0-2 weeks,Hero category content sprint,"Build an AI-search-ready Apparel hub with buyer questions, use-cases, comparison tables and internal links.",SEO/Content/Merchandising,Non-brand category query coverage and richer category authority.
+2-4 weeks,Product feed enrichment,"Improve titles/descriptions, GTIN/SKU coverage, product highlights, shipping, return policy and high-quality images.",Ecommerce/Merchant Center,Higher product data completeness and shopping eligibility.
+2-4 weeks,Facet governance,"Define index/noindex/canonical rules for size, color, activity, price, sort and campaign parameters.",SEO/Engineering,Reduced crawl waste and duplicate URL risk.
+4-6 weeks,AI visibility dashboard,"Create Power BI report for AI share of voice, conversational query coverage, product term gaps and competitor presence.",BI/Marketing,Management visibility into AI-era search demand.
+4-8 weeks,Profit-based SEO model,"Join SEO landing pages to revenue, margin, stock and returns in Fabric.",BI/Data Engineering,SEO priorities ranked by profit and operational risk.
+8-12 weeks,Experiment loop,"Run A/B tests for category hub copy, PDP fit guidance, bundle messaging and FAQ modules.",Growth/BI,"Measured lift in conversion, AOV and return reduction."

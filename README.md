@@ -11,9 +11,11 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 - `artifacts/reports/leatt_ecommerce_bi_ml_ai_command_center_master.xlsx` - master Excel workbook with Fabric, ERD, Power BI, AI command-center and data-story sheets.
 - `artifacts/reports/leatt_kpi_and_report_rationale.pdf` - KPI/report rationale explaining why each KPI was used, what it signals and which business action it drives.
 - `artifacts/reports/leatt_decision_intelligence_playbook.pdf` - signal rules, root-cause playbook, owner actions and prioritized initiatives.
+- `artifacts/reports/leatt_ai_seo_best_practices_playbook.pdf` - latest AI-era ecommerce SEO best practices, KPIs and 12-week roadmap.
 - `docs/final_project_completion_report.md` - written completion report covering what was built, what the data tells us, SAP/dbt/Hybris positioning and cost handover.
 - `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for project review.
 - `docs/decision_intelligence_playbook.md` - management-system layer explaining thresholds, owners, decisions and executive storyline.
+- `docs/ai_seo_best_practices_playbook.md` - AI SEO strategy, Product schema/feed guidance, visibility KPIs and sources.
 - `docs/portfolio_index.html` - local clickable index for opening the deliverables.
 - `docs/fabric_cost_control_and_handover.md` - Fabric F2 suspend/resume and production hardening checklist.
 
@@ -37,6 +39,7 @@ It demonstrates:
 - `src/adf/`: Azure Data Factory export placeholder notes.
 - `src/add_intelligent_command_center.py`: reproducible AI command-center and data-story generator.
 - `src/add_decision_intelligence_layer.py`: reproducible signal-rule/root-cause/business-priority generator.
+- `src/add_ai_seo_best_practices.py`: reproducible AI SEO best-practices, KPI and roadmap generator.
 - `src/add_kpi_rationale_layer.py`: reproducible KPI/report rationale generator.
 - `src/finalize_leatt_project.py`: final dossier/deck/index/handover pack generator.
 - `docs/`: architecture, Azure/Fabric export, Git proof, and source-control instructions.
