@@ -1,0 +1,2 @@
+model_name,training_rows,test_rows,auc,accuracy,precision,recall,generated_at
+Return Risk Logistic Regression,90000,30000,0.5892446190123892,0.4645666666666667,0.07498960128349873,0.7178612059158134,2026-07-17T19:09:31
