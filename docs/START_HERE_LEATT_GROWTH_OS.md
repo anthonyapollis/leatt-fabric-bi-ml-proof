@@ -25,4 +25,4 @@ This is the neat combined delivery for the Leatt BI, ML, Fabric and ecommerce an
 
 The live Power BI item was created in the Fabric/Power BI workspace and bound to the semantic model. Some service export screenshots rendered Power BI loading/sign-in screens, so the package uses the API proof plus static report screenshots instead of pretending those blank exports were visual proof.
 
-Generated 2026-07-17 23:26.
+Generated 2026-07-17 23:41.

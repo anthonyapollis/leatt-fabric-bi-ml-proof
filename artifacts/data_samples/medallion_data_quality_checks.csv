@@ -1,0 +1,8 @@
+dimension,rule,bronze_failed_rows,silver_action,silver_failed_rows_after_action,status
+Completeness,product_title is not null,82,Fixed in Silver with Unknown Product mapping queue,0,corrected
+Validity,quantity > 0,60,Fixed by absolute quantity and minimum one unit,0,corrected
+Validity,discount_pct between 0 and 70%,55,Clipped to business-approved discount ceiling,0,corrected
+Validity,order_date parseable,40,Defaulted to exception date and flagged for source correction,0,corrected
+Accuracy,net revenue equals gross less discount,45,Recalculated in Silver,0,corrected
+Uniqueness,transaction_line_id unique,30,Deduplicated in Silver on transaction_line_id,0,corrected
+Conformity,province/city standardised,75,Trimmed and title-cased in Silver,0,corrected

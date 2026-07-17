@@ -13,6 +13,7 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 
 ## Final deliverables
 
+- `artifacts/reports/leatt_medallion_architecture_dirty_to_clean_report.pdf` - Bronze/Silver/Gold medallion architecture, dirty-data cleansing rules, data-quality gates and Fabric implementation map.
 - `artifacts/reports/leatt_growth_os_case_study.pdf` - lead portfolio case study: a single visual storyline from storefront evidence to Fabric, Power BI, ML, AI SEO, SAP reconciliation and executive action.
 - `artifacts/reports/leatt_story_driven_ebook.pdf` - story-first ebook that explains the business problem, what the data says, what was learned, and which leadership actions follow.
 - `artifacts/reports/leatt_story_driven_executive_report.pdf` - concise board-style report built around revenue, margin, returns, ML risk, SEO, governance and Azure/Fabric proof.
@@ -41,6 +42,7 @@ It demonstrates:
 - Public website/catalog extraction.
 - Synthetic million-row ecommerce transaction generation.
 - Dimensional BI modeling.
+- Medallion architecture with Bronze dirty landing, Silver cleansing, Gold marts and data-quality gates.
 - ML customer scoring and revenue forecasting.
 - A/B testing and marketing ROI analysis.
 - Competitor and SEO analysis.
@@ -59,6 +61,7 @@ It demonstrates:
 - `src/add_decision_intelligence_layer.py`: reproducible signal-rule/root-cause/business-priority generator.
 - `src/add_ai_seo_best_practices.py`: reproducible AI SEO best-practices, KPI and roadmap generator.
 - `src/add_kpi_rationale_layer.py`: reproducible KPI/report rationale generator.
+- `src/add_medallion_architecture_pack.py`: Bronze/Silver/Gold medallion architecture, dirty-data samples, quality gates and report generator.
 - `src/create_premium_report_pack.py`: premium executive report, storybook and dashboard gallery generator.
 - `src/create_growth_os_case_study.py`: visual case-study generator that consolidates the scattered reports into one Growth OS storyline.
 - `src/create_story_driven_report.py`: story-first ebook/report generator using the modeled warehouse, screenshots and decision-intelligence outputs.

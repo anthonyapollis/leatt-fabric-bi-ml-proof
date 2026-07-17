@@ -42,6 +42,7 @@ class PortfolioItem:
 PDF_ITEMS = [
     PortfolioItem("Start Here: Leatt Growth OS Case Study", REPORTS / "leatt_growth_os_case_study.pdf", "01_MASTER_STORY", "Lead visual case study and best first-read artifact."),
     PortfolioItem("Story-Driven Executive Report", REPORTS / "leatt_story_driven_executive_report.pdf", "01_MASTER_STORY", "Board-style summary of the commercial story."),
+    PortfolioItem("Medallion Architecture: Dirty To Clean", REPORTS / "leatt_medallion_architecture_dirty_to_clean_report.pdf", "03_AZURE_FABRIC_DATA_FACTORY_PROOF", "Bronze/Silver/Gold architecture, dirty data cleansing rules and data-quality gates."),
     PortfolioItem("Premium Executive BI Report", REPORTS / "leatt_premium_executive_bi_report.pdf", "02_POWERBI_AND_DASHBOARDS", "Polished Power BI-style report pages."),
     PortfolioItem("Power BI ML Report Screenshots", REPORTS / "leatt_powerbi_ml_report_screenshots.pdf", "02_POWERBI_AND_DASHBOARDS", "Static Power BI/ML report evidence."),
     PortfolioItem("Fabric ERD And Deployment Report", REPORTS / "leatt_erd_and_fabric_deployment_report.pdf", "03_AZURE_FABRIC_DATA_FACTORY_PROOF", "ERD, Lakehouse/Warehouse and Fabric architecture proof."),
@@ -56,6 +57,7 @@ PDF_ITEMS = [
 ]
 
 NON_PDF_ITEMS = [
+    PortfolioItem("Medallion Dirty Clean Gold Workbook", REPORTS / "leatt_medallion_architecture_dirty_clean_gold.xlsx", "08_EXCEL_AND_DATA", "Bronze dirty sample, Silver clean sample, Gold KPI marts and quality rules.", False),
     PortfolioItem("Master Excel Command Center", REPORTS / "leatt_ecommerce_bi_ml_ai_command_center_master.xlsx", "08_EXCEL_AND_DATA", "Excel workbook with BI, ML, Fabric and story sheets.", False),
     PortfolioItem("Fabric ERD Deployment Workbook", REPORTS / "leatt_ecommerce_bi_ml_fabric_erd_deployment_master.xlsx", "08_EXCEL_AND_DATA", "Workbook with ERD and deployment tabs.", False),
     PortfolioItem("Finance Governance Workbook", REPORTS / "leatt_ecommerce_bi_ml_finance_governance_master.xlsx", "08_EXCEL_AND_DATA", "Workbook for reconciliation, SAP mapping and governance.", False),
@@ -64,6 +66,7 @@ NON_PDF_ITEMS = [
 
 DOC_ITEMS = [
     DOCS / "leatt_growth_os_case_study.md",
+    DOCS / "MEDALLION_ARCHITECTURE_DIRTY_TO_CLEAN.md",
     DOCS / "powerbi_report_creation_proof.md",
     DOCS / "fabric_onelake_upload_proof.md",
     DOCS / "fabric_push_million_rows_runbook.md",

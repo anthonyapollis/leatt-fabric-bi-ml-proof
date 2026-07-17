@@ -1,0 +1,6 @@
+metric,value
+bronze_rows_raw,5030
+silver_rows_deduplicated,5000
+rows_removed_as_duplicates,30
+records_corrected_or_flagged,346
+clean_rows,4654
