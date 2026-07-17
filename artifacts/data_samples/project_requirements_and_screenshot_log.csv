@@ -1,0 +1,18 @@
+requirement,status,evidence
+Extract ecommerce data from Leatt ZA website,Done,Product catalog CSV and Shopify endpoint evidence
+Confirm ecommerce platform,Done,Shopify header products.json cart.js cdn.shopify.com
+Generate millions of ecommerce transaction rows,Done,2M-row parquet and SQLite warehouse
+Push data into Azure Fabric,Done,Leatt_BI_ML_Lakehouse OneLake upload proof
+Use Data Factory layer,Done,pl_leatt_million_row_lakehouse_load and pipeline template
+Create ERD,Done,leatt_star_schema_erd.png and Mermaid ERD
+Build BI ML reports,Done,Excel PDF DAX forecast ML scores
+Add AB testing and marketing analysis,Done,Growth workbook report and CSVs
+Add competitor analysis and SEO,Done,Competitor and SEO roadmap
+Add AI roadmap,Done,AI use case roadmap and automation notes
+Add accounting reconciliation,Done,VAT GL trial balance reconciliation tables
+Add data audit governance,Done,Control matrix audit exceptions governance policy
+Add SAP BW SAP Business One datasource design,Done,SAP mapping integration docs
+Explain SAP Hybris SAP Commerce Cloud fit,Done,Hybris fit analysis
+Align to Senior BI Developer job spec,Done,Role alignment matrix and target job spec
+Create Git proof package,Done,Git repo with commits and proof docs
+Add Databricks transferability note,Pending,To add as addendum
