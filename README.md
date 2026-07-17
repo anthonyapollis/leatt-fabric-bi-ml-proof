@@ -9,6 +9,7 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 - `artifacts/reports/leatt_growth_os_master_portfolio.pdf` - combined master dossier. Open this first.
 - `docs/START_HERE_LEATT_GROWTH_OS.md` - clean reading order and proof guide.
 - `docs/leatt_growth_os_combined_index.html` - clickable local index for the curated package.
+- `docs/AZURE_COST_SHUTDOWN_PROOF.md` - verified Azure cost-control shutdown proof; Fabric F2 is paused and no other Azure resources/VMs were found.
 - `artifacts/data_samples/leatt_growth_os_combined_manifest.csv` - manifest of the curated final delivery.
 
 ## Final deliverables

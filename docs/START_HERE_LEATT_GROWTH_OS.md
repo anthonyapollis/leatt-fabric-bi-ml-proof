@@ -10,6 +10,7 @@ This is the neat combined delivery for the Leatt BI, ML, Fabric and ecommerce an
 4. For Power BI proof, open `02_POWERBI_AND_DASHBOARDS`.
 5. For SAP/accounting/governance, open `04_ACCOUNTING_SAP_GOVERNANCE`.
 6. For Excel, source samples and workbooks, open `08_EXCEL_AND_DATA`.
+7. For Azure cost-control proof, open `10_SOURCE_AND_GIT_PROOF/AZURE_COST_SHUTDOWN_PROOF.md`.
 
 ## What The Project Proves
 
