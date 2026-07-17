@@ -1,0 +1,6 @@
+from_table,from_column,to_table,to_column,cardinality
+dim_customer,customer_id,fact_transaction_lines,customer_id,1:*
+dim_product_variant,variant_id,fact_transaction_lines,variant_id,1:*
+dim_date,date_key,fact_transaction_lines,order_date,1:*
+dim_customer,customer_id,customer_ml_scores,customer_id,1:1
+fact_transaction_lines,month,finance_reconciliation,month,*:1

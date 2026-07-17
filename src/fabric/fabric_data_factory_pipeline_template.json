@@ -1,0 +1,40 @@
+{
+  "name": "pl_leatt_shopify_to_lakehouse_bronze",
+  "description": "Fabric Data Factory pipeline template for Leatt ecommerce catalog and million-row local parquet landing.",
+  "activities": [
+    {
+      "name": "copy_shopify_products_json_to_bronze",
+      "type": "Copy",
+      "source": {
+        "type": "RestSource",
+        "requestMethod": "GET",
+        "relativeUrl": "/products.json?limit=250"
+      },
+      "sink": {
+        "type": "LakehouseFilesSink",
+        "folderPath": "Files/Bronze/shopify/products_json/"
+      }
+    },
+    {
+      "name": "copy_transaction_parquet_to_bronze",
+      "type": "Copy",
+      "source": {
+        "type": "FileSource",
+        "path": "local_or_onelake_staging/leatt_ecommerce_transactions_2m.parquet"
+      },
+      "sink": {
+        "type": "LakehouseFilesSink",
+        "folderPath": "Files/Bronze/transactions/"
+      }
+    },
+    {
+      "name": "load_transaction_delta_table",
+      "type": "Notebook",
+      "description": "Run Spark notebook to read Bronze parquet and write Delta table silver.fact_transaction_lines."
+    }
+  ],
+  "parameters": {
+    "shopifyBaseUrl": "https://za.leatt.com",
+    "targetLakehouse": "Leatt_BI_ML_Lakehouse"
+  }
+}

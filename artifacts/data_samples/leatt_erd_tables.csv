@@ -1,0 +1,8 @@
+name,type,grain,rows,keys,description
+fact_transaction_lines,Fact,One ecommerce order line,"2,000,000",transaction_line_id PK; order_id; customer_id FK; variant_id FK,"Core sales, discount, revenue, margin, return, payment and campaign fact."
+dim_customer,Dimension,One synthetic customer,"180,000",customer_id PK,"Customer geography, rider type, acquisition channel, loyalty tier, age band and opt-in status."
+dim_product_variant,Dimension,One Shopify product variant,"11,354",variant_id PK; product_id,"Extracted Leatt product/variant catalog with category, SKU, price, availability and source URL."
+dim_date,Dimension,One calendar date,912,date_key PK,Calendar/date attributes derived from order_date for time intelligence.
+customer_ml_scores,ML Output,One customer score,"180,000",customer_id FK,"Repurchase propensity, value score, margin rate, return rate and ML segment."
+agg_monthly/category/product/province/channel,Gold Aggregates,Reporting aggregate,Small,various,Power BI-ready aggregate tables for executive dashboards.
+finance_reconciliation,Finance Mart,One accounting period,30,month,"VAT, refunds, sales excl/incl VAT, payment fees and expected cash reconciliation."
