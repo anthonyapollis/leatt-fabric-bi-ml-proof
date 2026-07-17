@@ -1,0 +1,11 @@
+resource_type,name,id_or_path,bytes_or_sku,purpose
+ResourceGroup,rg-leatt-fabric-bi-ml,/subscriptions/cea67e6f-62b2-4b2f-83e8-9af31093d8c8/resourceGroups/rg-leatt-fabric-bi-ml,,Azure container for Fabric capacity
+FabricCapacity,leattfabricf2,4137aea9-adf5-4759-9a49-20de9c246633,F2,Active Fabric capacity in South Africa North
+Workspace,Apollis,e515bafe-7290-4832-ae1d-514be43a9d87,,Fabric workspace assigned to capacity
+Lakehouse,Leatt_BI_ML_Lakehouse,dca60749-eaef-410e-9121-ea16eedbc975,,Target Lakehouse
+SQLEndpoint,Leatt_BI_ML_Lakehouse,433371a2-1f06-4053-999e-7f8ee95ba5c9,,Lakehouse SQL endpoint
+DataPipeline,pl_leatt_million_row_lakehouse_load,9e82c185-e0ac-485d-9810-4bccdcfe6cf9,,Data Factory pipeline item
+OneLakeFile,leatt_ecommerce_transactions_2m.parquet,Apollis/Leatt_BI_ML_Lakehouse.Lakehouse/Files/Bronze/leatt_ecommerce_transactions_2m.parquet,90699835,2M-row transaction fact table
+OneLakeFile,leatt_product_catalog.csv,Apollis/Leatt_BI_ML_Lakehouse.Lakehouse/Files/Bronze/leatt_product_catalog.csv,8928066,Product catalog
+OneLakeFile,leatt_synthetic_customers.csv,Apollis/Leatt_BI_ML_Lakehouse.Lakehouse/Files/Bronze/leatt_synthetic_customers.csv,13464222,Synthetic customers
+OneLakeFile,leatt_customer_ml_scores.csv,Apollis/Leatt_BI_ML_Lakehouse.Lakehouse/Files/Silver/leatt_customer_ml_scores.csv,31034720,ML scores

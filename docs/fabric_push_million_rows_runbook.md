@@ -54,3 +54,22 @@ Interpretation: the tenant/API access is working, but Lakehouse creation is bloc
 - Fabric Lakehouse copy activity: https://learn.microsoft.com/en-us/fabric/data-factory/connector-lakehouse-copy-activity
 
 Generated: 2026-07-17 18:34
+
+## Completed deployment update - 2026-07-17
+
+Fabric capacity was activated and workspace `Apollis` was assigned to F2 capacity `leattfabricf2`.
+
+Created Fabric items:
+
+- Lakehouse: `Leatt_BI_ML_Lakehouse` (`dca60749-eaef-410e-9121-ea16eedbc975`)
+- SQL endpoint: `Leatt_BI_ML_Lakehouse` (`433371a2-1f06-4053-999e-7f8ee95ba5c9`)
+- Data Factory pipeline item: `pl_leatt_million_row_lakehouse_load` (`9e82c185-e0ac-485d-9810-4bccdcfe6cf9`)
+
+Uploaded OneLake files:
+
+- `Files/Bronze/leatt_ecommerce_transactions_2m.parquet` - 90,699,835 bytes, 2,000,000 rows
+- `Files/Bronze/leatt_product_catalog.csv` - 8,928,066 bytes
+- `Files/Bronze/leatt_synthetic_customers.csv` - 13,464,222 bytes
+- `Files/Silver/leatt_customer_ml_scores.csv` - 31,034,720 bytes
+
+See `docs/fabric_onelake_upload_proof.md` for the full proof register.

@@ -4,6 +4,7 @@ import argparse
 import math
 import subprocess
 import sys
+import shutil
 from pathlib import Path
 from urllib.parse import quote
 
@@ -11,8 +12,9 @@ import requests
 
 
 def get_token() -> str:
+    az = shutil.which("az") or shutil.which("az.cmd") or r"C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin\az.cmd"
     cmd = [
-        "az",
+        az,
         "account",
         "get-access-token",
         "--resource",
