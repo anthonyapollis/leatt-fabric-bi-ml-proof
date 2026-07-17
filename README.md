@@ -6,6 +6,8 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 
 ## Final deliverables
 
+- `artifacts/reports/leatt_premium_executive_bi_report.pdf` - redesigned premium executive report, rebuilt around modern dashboard/report design patterns.
+- `artifacts/reports/leatt_premium_bi_storybook.pdf` - redesigned ebook/storybook with stronger narrative and decision flow.
 - `artifacts/reports/leatt_final_executive_portfolio_dossier.pdf` - executive project dossier with screenshots, KPIs, data story and handover notes.
 - `artifacts/reports/leatt_fabric_bi_ml_board_presentation.pptx` - PowerPoint-compatible executive presentation.
 - `artifacts/reports/leatt_ecommerce_bi_ml_ai_command_center_master.xlsx` - master Excel workbook with Fabric, ERD, Power BI, AI command-center and data-story sheets.
@@ -16,6 +18,8 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 - `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for project review.
 - `docs/decision_intelligence_playbook.md` - management-system layer explaining thresholds, owners, decisions and executive storyline.
 - `docs/ai_seo_best_practices_playbook.md` - AI SEO strategy, Product schema/feed guidance, visibility KPIs and sources.
+- `docs/leatt_premium_report_design_system.md` - design rationale, source inspiration and report design system for the premium redesign.
+- `docs/premium_dashboard_gallery.html` - local gallery for the redesigned report pages.
 - `docs/powerbi_report_creation_proof.md` - live Power BI report item ID, URL, API result, export proof and screenshot paths.
 - `docs/portfolio_index.html` - local clickable index for opening the deliverables.
 - `docs/fabric_cost_control_and_handover.md` - Fabric F2 suspend/resume and production hardening checklist.
@@ -43,6 +47,7 @@ It demonstrates:
 - `src/add_decision_intelligence_layer.py`: reproducible signal-rule/root-cause/business-priority generator.
 - `src/add_ai_seo_best_practices.py`: reproducible AI SEO best-practices, KPI and roadmap generator.
 - `src/add_kpi_rationale_layer.py`: reproducible KPI/report rationale generator.
+- `src/create_premium_report_pack.py`: premium executive report, storybook and dashboard gallery generator.
 - `src/finalize_leatt_project.py`: final dossier/deck/index/handover pack generator.
 - `docs/`: architecture, Azure/Fabric export, Git proof, and source-control instructions.
 - `artifacts/reports/`: delivery-ready Excel/PDF reports.
