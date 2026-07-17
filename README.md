@@ -2,6 +2,17 @@
 
 This repository is a Git-ready proof package for an end-to-end ecommerce analytics project built around the Leatt ZA public ecommerce catalog.
 
+Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof
+
+## Final leave-behind deliverables
+
+- `artifacts/reports/leatt_final_executive_portfolio_dossier.pdf` - board/interview dossier with screenshots, KPIs, data story and handover notes.
+- `artifacts/reports/leatt_fabric_bi_ml_board_presentation.pptx` - PowerPoint-compatible executive presentation.
+- `artifacts/reports/leatt_ecommerce_bi_ml_ai_command_center_master.xlsx` - master Excel workbook with Fabric, ERD, Power BI, AI command-center and data-story sheets.
+- `docs/final_project_completion_report.md` - written completion report covering what was built, what the data tells us, SAP/dbt/Hybris positioning and cost handover.
+- `docs/portfolio_index.html` - local clickable index for opening the deliverables.
+- `docs/fabric_cost_control_and_handover.md` - Fabric F2 suspend/resume and production hardening checklist.
+
 It demonstrates:
 
 - Public website/catalog extraction.
@@ -20,6 +31,8 @@ It demonstrates:
 - `src/powerbi/`: starter DAX measures.
 - `src/fabric/`: Fabric workspace item placeholders and metadata notes.
 - `src/adf/`: Azure Data Factory export placeholder notes.
+- `src/add_intelligent_command_center.py`: reproducible AI command-center and data-story generator.
+- `src/finalize_leatt_project.py`: final dossier/deck/index/handover pack generator.
 - `docs/`: architecture, Azure/Fabric export, Git proof, and source-control instructions.
 - `artifacts/reports/`: portfolio-ready Excel/PDF reports.
 - `artifacts/data_samples/`: small CSV samples, source register, and manifests.
@@ -62,3 +75,11 @@ See `docs/SENIOR_BI_DEVELOPER_JOB_ALIGNMENT.md`.
 
 
 The exact target Senior BI Developer job specification is preserved in `docs/TARGET_JOB_SPEC.md`.
+
+## Cost control reminder
+
+Suspend Fabric F2 capacity after review to protect Azure credit:
+
+```powershell
+az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+```
