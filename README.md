@@ -6,6 +6,7 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 
 ## Final deliverables
 
+- `artifacts/reports/leatt_growth_os_case_study.pdf` - lead portfolio case study: a single visual storyline from storefront evidence to Fabric, Power BI, ML, AI SEO, SAP reconciliation and executive action.
 - `artifacts/reports/leatt_story_driven_ebook.pdf` - story-first ebook that explains the business problem, what the data says, what was learned, and which leadership actions follow.
 - `artifacts/reports/leatt_story_driven_executive_report.pdf` - concise board-style report built around revenue, margin, returns, ML risk, SEO, governance and Azure/Fabric proof.
 - `artifacts/reports/leatt_premium_executive_bi_report.pdf` - redesigned premium executive report, rebuilt around modern dashboard/report design patterns.
@@ -17,6 +18,7 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 - `artifacts/reports/leatt_decision_intelligence_playbook.pdf` - signal rules, root-cause playbook, owner actions and prioritized initiatives.
 - `artifacts/reports/leatt_ai_seo_best_practices_playbook.pdf` - latest AI-era ecommerce SEO best practices, KPIs and 12-week roadmap.
 - `docs/final_project_completion_report.md` - written completion report covering what was built, what the data tells us, SAP/dbt/Hybris positioning and cost handover.
+- `docs/leatt_growth_os_case_study.md` - concise narrative spine for the lead Growth OS case study.
 - `docs/leatt_story_driven_report_narrative.md` - plain-English data story used by the ebook and executive report.
 - `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for project review.
 - `docs/decision_intelligence_playbook.md` - management-system layer explaining thresholds, owners, decisions and executive storyline.
@@ -51,6 +53,7 @@ It demonstrates:
 - `src/add_ai_seo_best_practices.py`: reproducible AI SEO best-practices, KPI and roadmap generator.
 - `src/add_kpi_rationale_layer.py`: reproducible KPI/report rationale generator.
 - `src/create_premium_report_pack.py`: premium executive report, storybook and dashboard gallery generator.
+- `src/create_growth_os_case_study.py`: visual case-study generator that consolidates the scattered reports into one Growth OS storyline.
 - `src/create_story_driven_report.py`: story-first ebook/report generator using the modeled warehouse, screenshots and decision-intelligence outputs.
 - `src/finalize_leatt_project.py`: final dossier/deck/index/handover pack generator.
 - `docs/`: architecture, Azure/Fabric export, Git proof, and source-control instructions.
