@@ -2,6 +2,8 @@
 
 Generated: 2026-07-17 18:06
 
+Source role text is preserved in `docs/TARGET_JOB_SPEC.md`.
+
 ## Role Summary Alignment
 
 Senior Business Intelligence Developer role requiring Microsoft Fabric, Azure Data Factory, Power BI, SQL, DAX, Python/R, AI-driven BI, governance, security, stakeholder leadership, training, international delivery, and enterprise-grade analytics architecture.
