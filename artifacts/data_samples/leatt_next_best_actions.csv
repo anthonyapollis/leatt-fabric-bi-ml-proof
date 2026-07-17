@@ -1,0 +1,7 @@
+owner,action,rationale,priority,business_outcome
+CEO,Protect hero category,"Make Apparel the board-level growth theme; it contributes R1,759,430,045 revenue.",High,Revenue growth
+CMO,Scale efficient acquisition,Use Direct as always-on efficiency engine with ROAS 100.0x.,High,Marketing efficiency
+COO,Reduce return leakage,Investigate Footwear return-rate drivers before increasing media spend.,Medium,Margin protection
+Merchandising,Build margin bundle,Bundle Jacket ADV FlowTour 5.5 - Women with compatible accessories and protection products.,High,AOV and margin
+Data Governance,Operationalize evidence,"Publish source register, row counts, file hashes, capacity status and refresh runbook into monthly close pack.",High,Auditability
+BI Ops,Investigate revenue anomaly,2025-12 changed 12.6% versus 3-month average.,Medium,Monitoring

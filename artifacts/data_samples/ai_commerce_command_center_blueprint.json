@@ -1,0 +1,83 @@
+{
+  "system": "Leatt AI Commerce Command Center",
+  "created": "2026-07-17T19:46:58",
+  "fabric_workspace": "Apollis",
+  "lakehouse": "Leatt_BI_ML_Lakehouse",
+  "powerbi_dataset": "Leatt Fabric BI ML Semantic Model 202607171909",
+  "agents": [
+    {
+      "agent_name": "Revenue Sentinel",
+      "purpose": "Monitors revenue, margin, returns and anomaly signals; creates executive alerts.",
+      "input_tables": "MonthlyTrend, CategoryKPI, FabricProof",
+      "output": "Power BI alert + Teams/Email summary"
+    },
+    {
+      "agent_name": "Merchandising Copilot",
+      "purpose": "Recommends hero products, bundles, PDP copy fixes and attach items.",
+      "input_tables": "ProductKPI, MLReturnRisk, SEO roadmap",
+      "output": "Product backlog and campaign briefs"
+    },
+    {
+      "agent_name": "Finance Reconciler",
+      "purpose": "Compares ecommerce revenue, VAT, refunds and SAP posted finance extracts.",
+      "input_tables": "Finance Reconciliation, SAP B1/BW extracts",
+      "output": "Audit exception register"
+    },
+    {
+      "agent_name": "Growth Experimenter",
+      "purpose": "Designs A/B tests, reads results, and recommends rollouts.",
+      "input_tables": "AB Test Plan/Results, ChannelROI",
+      "output": "Experiment decision memo"
+    },
+    {
+      "agent_name": "Governance Steward",
+      "purpose": "Checks source freshness, PII minimization, row counts, lineage and Git proof.",
+      "input_tables": "Source Register, Requirements Log",
+      "output": "Governance scorecard"
+    }
+  ],
+  "next_best_actions": [
+    {
+      "owner": "CEO",
+      "action": "Protect hero category",
+      "rationale": "Make Apparel the board-level growth theme; it contributes R1,759,430,045 revenue.",
+      "priority": "High",
+      "business_outcome": "Revenue growth"
+    },
+    {
+      "owner": "CMO",
+      "action": "Scale efficient acquisition",
+      "rationale": "Use Direct as always-on efficiency engine with ROAS 100.0x.",
+      "priority": "High",
+      "business_outcome": "Marketing efficiency"
+    },
+    {
+      "owner": "COO",
+      "action": "Reduce return leakage",
+      "rationale": "Investigate Footwear return-rate drivers before increasing media spend.",
+      "priority": "Medium",
+      "business_outcome": "Margin protection"
+    },
+    {
+      "owner": "Merchandising",
+      "action": "Build margin bundle",
+      "rationale": "Bundle Jacket ADV FlowTour 5.5 - Women with compatible accessories and protection products.",
+      "priority": "High",
+      "business_outcome": "AOV and margin"
+    },
+    {
+      "owner": "Data Governance",
+      "action": "Operationalize evidence",
+      "rationale": "Publish source register, row counts, file hashes, capacity status and refresh runbook into monthly close pack.",
+      "priority": "High",
+      "business_outcome": "Auditability"
+    },
+    {
+      "owner": "BI Ops",
+      "action": "Investigate revenue anomaly",
+      "rationale": "2025-12 changed 12.6% versus 3-month average.",
+      "priority": "Medium",
+      "business_outcome": "Monitoring"
+    }
+  ]
+}

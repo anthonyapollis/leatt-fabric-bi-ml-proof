@@ -1,0 +1,6 @@
+agent_name,purpose,input_tables,output
+Revenue Sentinel,"Monitors revenue, margin, returns and anomaly signals; creates executive alerts.","MonthlyTrend, CategoryKPI, FabricProof",Power BI alert + Teams/Email summary
+Merchandising Copilot,"Recommends hero products, bundles, PDP copy fixes and attach items.","ProductKPI, MLReturnRisk, SEO roadmap",Product backlog and campaign briefs
+Finance Reconciler,"Compares ecommerce revenue, VAT, refunds and SAP posted finance extracts.","Finance Reconciliation, SAP B1/BW extracts",Audit exception register
+Growth Experimenter,"Designs A/B tests, reads results, and recommends rollouts.","AB Test Plan/Results, ChannelROI",Experiment decision memo
+Governance Steward,"Checks source freshness, PII minimization, row counts, lineage and Git proof.","Source Register, Requirements Log",Governance scorecard
