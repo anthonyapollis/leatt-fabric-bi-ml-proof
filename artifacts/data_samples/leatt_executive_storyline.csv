@@ -1,0 +1,6 @@
+story_moment,intelligent_position,how_to_say_it
+Board message,"The project has moved beyond reporting into an operating model: every KPI has a signal rule, owner and decision.","Use this to demonstrate senior BI leadership, not dashboard production."
+Commercial message,"Growth is meaningful only if margin, return leakage and channel economics stay healthy.","Open with revenue, then immediately explain margin and returns."
+ML message,"The return-risk model is a recall-focused watchlist, not a magic answer.",This is mature: it says how the model should and should not be used.
+Governance message,"The row counts, OneLake paths, Git commits and paused capacity make the work auditable.",This answers 'prove it' and 'what did it cost?' in the same story.
+Next decision,Return leakage reduction sprint,Create return-reason taxonomy and product-level return dashboard.

@@ -1,0 +1,9 @@
+problem,diagnostic_branch,question_to_ask,data_needed,likely_interpretation
+Revenue down,Category demand,Which categories moved versus 3-month average?,MonthlyTrend + CategoryKPI,"Campaign issue, product availability, seasonality or assortment gap."
+Revenue down,Channel mix,Did traffic/revenue shift away from efficient channels?,ChannelROI,"Media allocation, SEO ranking or landing-page relevance issue."
+Margin down,Discounting,Did discount depth increase by category/channel?,Fact transactions + ProductKPI,Promo overuse or weak pricing control.
+Margin down,Returns,Are returns rising in a specific category/product?,MLReturnRisk + Accounting Pack,"Sizing, content, fulfillment or quality leakage."
+Returns up,Product fit,"Are high-risk items clustered by category, size or product line?",ML scores + ProductKPI,"Improve size guide, PDP detail and customer education."
+Returns up,Fulfillment,Are return rates linked to fulfillment days or province?,Fact transactions + ProvinceKPI,Delivery promise or regional service gap.
+ROAS down,Traffic quality,Is revenue falling while spend remains high?,MarketingROI,"Creative fatigue, wrong audience, poor landing page."
+Audit exception,Data lineage,Do source/target row counts reconcile?,Source Register + Fabric Proof,"Duplicate, missing or stale pipeline load."
