@@ -1,0 +1,8 @@
+area,signal,finding,confidence
+Platform,HTTP header,powered-by Shopify,High
+Platform,Product endpoint,https://za.leatt.com/products.json?limit=1 returns products/variants JSON,High
+Platform,Cart endpoint,https://za.leatt.com/cart.js returns Shopify Ajax cart JSON,High
+Platform,CDN/assets,HTML uses cdn.shopify.com and /cdn/shop/t/ theme asset paths,High
+Platform,Currency/localization,cart.js returns currency ZAR for ZA storefront,Medium
+SAP Hybris,SAP Commerce Cloud possibility,Possible generally but no public evidence that za.leatt.com uses SAP Commerce Cloud,Medium
+Finance,SAP Business One or SAP BW fit,Best as accounting/finance source of record if implemented by business,High

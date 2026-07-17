@@ -1,6 +1,6 @@
 # Consolidated Source Register
 
-Updated: 2026-07-17 17:03
+Updated: 2026-07-17
 
 ## Leatt ZA product JSON
 - URL/File: https://za.leatt.com/products.json
@@ -91,3 +91,53 @@ Updated: 2026-07-17 17:03
 - URL/File: outputs/evidence_images/leatt_lifestyle_eyewear_collection.png
 - Type: User-provided screenshot
 - Used for: Evidence for eyewear product and pricing context.
+
+## SAP Business One Service Layer
+- URL/File: https://help.sap.com/docs/SAP_BUSINESS_ONE/f110a154dd0f4c20bf7f3ebca9eeb794/60c7a0b745bd486589f05a1da77041f3.html?locale=en-US
+- Type: Official SAP documentation
+- Used for: SAP Business One OData/HTTP extraction design.
+
+## SAP Business One Service Layer API Reference
+- URL/File: https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html
+- Type: Official SAP documentation
+- Used for: Business object and OData endpoint mapping.
+
+## SAP BW OData Queries
+- URL/File: https://help.sap.com/docs/SUPPORT_CONTENT/bwplaolap/3361382894.html
+- Type: Official SAP documentation
+- Used for: SAP BW query extraction option through OData.
+
+## SAP Commerce / Hybris
+- URL/File: https://www.sap.com/products/acquired-brands/what-is-hybris.html
+- Type: Official SAP page
+- Used for: Explains Hybris is now SAP Commerce Cloud and where it fits.
+
+## SARS VAT rate
+- URL/File: https://www.sars.gov.za/types-of-tax/value-added-tax/
+- Type: Official SARS page
+- Used for: VAT rate assumption for South African ecommerce accounting model.
+
+## Leatt ZA live Shopify platform check
+- URL/File: https://za.leatt.com
+- Type: Live endpoint/header inspection
+- Used for: Confirmed powered-by Shopify header and Shopify CDN/theme asset usage.
+
+## Leatt ZA products JSON
+- URL/File: https://za.leatt.com/products.json?limit=1
+- Type: Live public endpoint
+- Used for: Confirmed Shopify-style product JSON endpoint.
+
+## Leatt ZA cart JSON
+- URL/File: https://za.leatt.com/cart.js
+- Type: Live public endpoint
+- Used for: Confirmed Shopify Ajax cart endpoint and ZAR cart object.
+
+## Shopify Ajax API documentation
+- URL/File: https://shopify.dev/docs/api/ajax
+- Type: Official Shopify documentation
+- Used for: Validated /cart.js behavior and Shopify-hosted Ajax API context.
+
+## Shopify Liquid product object documentation
+- URL/File: https://shopify.dev/docs/api/liquid/objects/product
+- Type: Official Shopify documentation
+- Used for: Validated product/variant/handle/price concepts used in extraction.

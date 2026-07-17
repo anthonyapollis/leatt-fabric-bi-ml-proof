@@ -17,3 +17,13 @@ Fox Racing MTB Gear,https://www.foxracing.com/mtb.html,Competitor official site,
 Oakley MX Goggles,https://www.oakley.com/en-us/category/goggles/motocross,Competitor official site,Optics and motocross eyewear positioning.
 SCOTT MTB Goggles,https://www.scott-sports.com/us/en/products/bike-equipment-mw-goggles,Competitor official site,Goggle product/pricing range comparison.
 Leatt eyewear screenshot,outputs/evidence_images/leatt_lifestyle_eyewear_collection.png,User-provided screenshot,Evidence for eyewear product and pricing context.
+SAP Business One Service Layer,https://help.sap.com/docs/SAP_BUSINESS_ONE/f110a154dd0f4c20bf7f3ebca9eeb794/60c7a0b745bd486589f05a1da77041f3.html?locale=en-US,Official SAP documentation,SAP Business One OData/HTTP extraction design.
+SAP Business One Service Layer API Reference,https://help.sap.com/doc/056f69366b5345a386bb8149f1700c19/10.0/en-US/Service%20Layer%20API%20Reference.html,Official SAP documentation,Business object and OData endpoint mapping.
+SAP BW OData Queries,https://help.sap.com/docs/SUPPORT_CONTENT/bwplaolap/3361382894.html,Official SAP documentation,SAP BW query extraction option through OData.
+SAP Commerce / Hybris,https://www.sap.com/products/acquired-brands/what-is-hybris.html,Official SAP page,Explains Hybris is now SAP Commerce Cloud and where it fits.
+SARS VAT rate,https://www.sars.gov.za/types-of-tax/value-added-tax/,Official SARS page,VAT rate assumption for South African ecommerce accounting model.
+Leatt ZA live Shopify platform check,https://za.leatt.com,Live endpoint/header inspection,Confirmed powered-by Shopify header and Shopify CDN/theme asset usage.
+Leatt ZA products JSON,https://za.leatt.com/products.json?limit=1,Live public endpoint,Confirmed Shopify-style product JSON endpoint.
+Leatt ZA cart JSON,https://za.leatt.com/cart.js,Live public endpoint,Confirmed Shopify Ajax cart endpoint and ZAR cart object.
+Shopify Ajax API documentation,https://shopify.dev/docs/api/ajax,Official Shopify documentation,Validated /cart.js behavior and Shopify-hosted Ajax API context.
+Shopify Liquid product object documentation,https://shopify.dev/docs/api/liquid/objects/product,Official Shopify documentation,Validated product/variant/handle/price concepts used in extraction.
