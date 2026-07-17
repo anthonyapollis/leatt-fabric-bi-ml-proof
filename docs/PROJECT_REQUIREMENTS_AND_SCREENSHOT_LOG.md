@@ -11,7 +11,6 @@ This file tracks the user requirements, completed proof artifacts, and screensho
 - BI/ML reports.
 - Accounting reconciliation, governance and SAP source mapping.
 - Ecommerce platform research.
-- Senior BI Developer role alignment.
 - Git commits and source-control proof.
 
 ## Completed Fabric deployment

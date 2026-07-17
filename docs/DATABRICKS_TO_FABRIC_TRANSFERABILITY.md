@@ -1,10 +1,10 @@
 # Databricks To Microsoft Fabric Transferability
 
-The user has prior Databricks experience. This strengthens the Senior BI Developer story because the project applies lakehouse engineering concepts in Microsoft Fabric.
+This note maps common Databricks lakehouse concepts to the Microsoft Fabric implementation pattern used by the project.
 
-## How to position it
+## Concept Mapping
 
-Prior Databricks experience translates directly to Fabric through the lakehouse pattern:
+Databricks and Fabric share a lakehouse-oriented architecture pattern:
 
 | Lakehouse concept | Databricks | Microsoft Fabric |
 |---|---|---|
@@ -17,11 +17,3 @@ Prior Databricks experience translates directly to Fabric through the lakehouse 
 | BI serving | SQL Warehouse / external BI | Power BI / Direct Lake / SQL endpoint |
 | ML | MLflow / Feature Store | Fabric Data Science, notebooks, ML outputs |
 | Governance | Unity Catalog | Fabric workspace security, OneLake, Purview-style governance |
-
-## Interview phrasing
-
-> I have used Databricks before, so I understand the lakehouse architecture: Bronze/Silver/Gold data layers, scalable Spark transformations, Delta-style storage, notebooks, jobs, and ML workflows. In this project I applied that same architecture in Microsoft Fabric by landing ecommerce data into OneLake, creating a Lakehouse, designing an ERD/star schema, pushing 2M transaction rows, and preparing the data for Power BI, governance, accounting reconciliation and ML scoring.
-
-## Why it matters
-
-The target role asks for Microsoft Fabric, Power BI and modern data platforms. Databricks experience shows transferability across modern lakehouse tools, while this portfolio proves the same thinking in Fabric.

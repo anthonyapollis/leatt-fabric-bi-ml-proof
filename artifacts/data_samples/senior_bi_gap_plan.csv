@@ -1,7 +1,0 @@
-Gap,Current state,Recommended next step,Priority
-R language,Not used in this build.,Add an R notebook for statistical A/B test validation and forecast comparison.,Low
-Power Apps,"Power Platform is represented through Power BI/Power Automate-ready guidance, but no app was built.",Add a Power Apps issue-entry form for audit exceptions.,Medium
-Power Automate,Automation is covered as design guidance.,Create flow spec for exception notification and refresh alerts.,Medium
-Real order data,Only public catalog data and synthetic transactions are used.,"Connect authorized Shopify Admin/API, SAP B1 or BW extracts.",High
-Live Fabric export,Local Git-proof package exists; portal export must be added after workspace build.,Export Fabric workspace items into azure-export folder and commit.,High
-Certifications,"The package shows practical skill, not credentials.",List completed Microsoft certifications separately in CV/profile.,Personal

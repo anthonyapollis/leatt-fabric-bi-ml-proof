@@ -1,6 +1,6 @@
 # Git Proof Checklist
 
-Use this checklist when presenting the work.
+Use this checklist when reviewing the project assets.
 
 ## Local Git proof
 
@@ -23,4 +23,4 @@ Use this checklist when presenting the work.
 
 ## Data honesty note
 
-The product catalog source is public Leatt ZA website data. The transaction/customer rows are synthetic and are used for demonstration, performance testing, BI modeling, and ML portfolio proof.
+The product catalog source is public Leatt ZA website data. The transaction/customer rows are synthetic and are used for demonstration, performance testing, BI modeling, and ML validation.

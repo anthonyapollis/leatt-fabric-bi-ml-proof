@@ -220,7 +220,7 @@ def write_artifact_manifest(metrics: dict[str, str]) -> Path:
     ws.title = "Portfolio Index"
     ws.append(["artifact", "path", "purpose"])
     artifacts = [
-        ("Final dossier", OUT / "leatt_final_executive_portfolio_dossier.pdf", "Board/interview leave-behind"),
+        ("Final dossier", OUT / "leatt_final_executive_portfolio_dossier.pdf", "Executive project summary"),
         ("AI command center report", OUT / "ai_commerce_command_center_report.pdf", "AI operating model and next-best actions"),
         ("Master Excel", OUT / "leatt_ecommerce_bi_ml_ai_command_center_master.xlsx", "Workbook with BI, ERD, Fabric, Power BI and data story sheets"),
         ("Power BI screenshots", OUT / "leatt_powerbi_ml_report_screenshots.pdf", "Report screenshots/evidence pack"),
@@ -286,7 +286,7 @@ def make_pptx(metrics: dict[str, str]) -> Path:
         ("Power BI Executive Overview", "", "powerbi_executive_overview.png"),
         ("ML Return Risk Monitoring", "", "powerbi_ml_monitoring.png"),
         ("AI Commerce Command Center", "", "ai_commerce_command_center.png"),
-        ("Final Handover", "GitHub: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof\nSuspend Fabric F2 capacity after review.\nUse the master Excel and dossier as interview leave-behinds.", None),
+        ("Final Handover", "GitHub: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof\nSuspend Fabric F2 capacity after review.\nUse the master Excel and dossier as project handover artifacts.", None),
     ]
     image_files = [s[2] for s in slides if s[2]]
     with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as z:

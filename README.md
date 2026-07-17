@@ -4,15 +4,15 @@ This repository is a Git-ready proof package for an end-to-end ecommerce analyti
 
 Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof
 
-## Final leave-behind deliverables
+## Final deliverables
 
-- `artifacts/reports/leatt_final_executive_portfolio_dossier.pdf` - board/interview dossier with screenshots, KPIs, data story and handover notes.
+- `artifacts/reports/leatt_final_executive_portfolio_dossier.pdf` - executive project dossier with screenshots, KPIs, data story and handover notes.
 - `artifacts/reports/leatt_fabric_bi_ml_board_presentation.pptx` - PowerPoint-compatible executive presentation.
 - `artifacts/reports/leatt_ecommerce_bi_ml_ai_command_center_master.xlsx` - master Excel workbook with Fabric, ERD, Power BI, AI command-center and data-story sheets.
 - `artifacts/reports/leatt_kpi_and_report_rationale.pdf` - KPI/report rationale explaining why each KPI was used, what it signals and which business action it drives.
 - `artifacts/reports/leatt_decision_intelligence_playbook.pdf` - signal rules, root-cause playbook, owner actions and prioritized initiatives.
 - `docs/final_project_completion_report.md` - written completion report covering what was built, what the data tells us, SAP/dbt/Hybris positioning and cost handover.
-- `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for interview storytelling.
+- `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for project review.
 - `docs/decision_intelligence_playbook.md` - management-system layer explaining thresholds, owners, decisions and executive storyline.
 - `docs/portfolio_index.html` - local clickable index for opening the deliverables.
 - `docs/fabric_cost_control_and_handover.md` - Fabric F2 suspend/resume and production hardening checklist.
@@ -72,15 +72,6 @@ Get-ChildItem artifacts/evidence_images
 ```
 
 Generated on 2026-07-17 17:06.
-
-## Senior BI Developer Role Alignment
-
-This repository now includes a role-alignment pack for a Senior Business Intelligence Developer position covering Microsoft Fabric, Azure Data Factory, Power BI, SQL, DAX, Python, AI-driven BI, governance, SAP/accounting integration, stakeholder consulting and training.
-
-See `docs/SENIOR_BI_DEVELOPER_JOB_ALIGNMENT.md`.
-
-
-The exact target Senior BI Developer job specification is preserved in `docs/TARGET_JOB_SPEC.md`.
 
 ## Cost control reminder
 
