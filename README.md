@@ -4,6 +4,13 @@ This repository is a Git-ready delivery package for an end-to-end ecommerce anal
 
 Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof
 
+## Start Here
+
+- `artifacts/reports/leatt_growth_os_master_portfolio.pdf` - combined master dossier. Open this first.
+- `docs/START_HERE_LEATT_GROWTH_OS.md` - clean reading order and proof guide.
+- `docs/leatt_growth_os_combined_index.html` - clickable local index for the curated package.
+- `artifacts/data_samples/leatt_growth_os_combined_manifest.csv` - manifest of the curated final delivery.
+
 ## Final deliverables
 
 - `artifacts/reports/leatt_growth_os_case_study.pdf` - lead portfolio case study: a single visual storyline from storefront evidence to Fabric, Power BI, ML, AI SEO, SAP reconciliation and executive action.
