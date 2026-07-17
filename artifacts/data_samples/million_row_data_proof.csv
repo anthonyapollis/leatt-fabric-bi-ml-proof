@@ -1,0 +1,9 @@
+asset,metric,value
+fact_transaction_lines,row_count,2000000
+dim_customer,row_count,180000
+dim_product_variant,row_count,11354
+fact_transaction_lines,net_revenue_zar,3994247412.56
+leatt_ecommerce_transactions_2m.parquet,file_size_bytes,90699835
+leatt_ecommerce_warehouse.sqlite,file_size_bytes,565112832
+leatt_customer_ml_scores.csv,file_size_bytes,31034720
+leatt_ecommerce_transactions_2m.parquet,sha256,AF350C0D018509C267FDAE4F507E9D20C8888DDD059317B0BBC9776BC5C8A53E
