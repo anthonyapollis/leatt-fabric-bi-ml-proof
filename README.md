@@ -16,6 +16,7 @@ Remote proof repository: https://github.com/anthonyapollis/leatt-fabric-bi-ml-pr
 - `docs/kpi_and_report_rationale.md` - Markdown KPI catalog and report catalog for project review.
 - `docs/decision_intelligence_playbook.md` - management-system layer explaining thresholds, owners, decisions and executive storyline.
 - `docs/ai_seo_best_practices_playbook.md` - AI SEO strategy, Product schema/feed guidance, visibility KPIs and sources.
+- `docs/powerbi_report_creation_proof.md` - live Power BI report item ID, URL, API result, export proof and screenshot paths.
 - `docs/portfolio_index.html` - local clickable index for opening the deliverables.
 - `docs/fabric_cost_control_and_handover.md` - Fabric F2 suspend/resume and production hardening checklist.
 
@@ -35,6 +36,7 @@ It demonstrates:
 - `src/python/`: reproducible build scripts.
 - `src/sql/`: Fabric Lakehouse/Warehouse SQL model.
 - `src/powerbi/`: starter DAX measures.
+- `src/powerbi/create_fabric_powerbi_reports.py`: creates the live Power BI report item through the Fabric Report Create API.
 - `src/fabric/`: Fabric workspace item placeholders and metadata notes.
 - `src/adf/`: Azure Data Factory export placeholder notes.
 - `src/add_intelligent_command_center.py`: reproducible AI command-center and data-story generator.

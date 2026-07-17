@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-07-17T21:21:18",
+  "workspace_id": "e515bafe-7290-4832-ae1d-514be43a9d87",
+  "dataset_id": "9ee6f8a0-aec0-48ff-a44c-15985f3bd4bc",
+  "report_name": "Leatt BI ML Executive Report 202607172121",
+  "request_status": 202,
+  "response_headers": {
+    "Location": "https://wabi-south-africa-north-a-primary-redirect.analysis.windows.net/v1/operations/cbce1a2f-0713-4a92-86e4-094385938410",
+    "Retry-After": "20",
+    "x-ms-operation-id": "cbce1a2f-0713-4a92-86e4-094385938410"
+  },
+  "response_body": "null",
+  "definition_folder": "C:\\Users\\Anthony.DESKTOP-ES5HL78\\Documents\\Codex\\2026-07-17\\files-mentioned-by-the-user-codex-3\\outputs\\fabric_powerbi_reports\\Leatt BI ML Executive Report 202607172121.Report",
+  "source": "Fabric Reports Create API with PBIR definition",
+  "operation_status_code": 200,
+  "operation_body": {
+    "status": "Succeeded",
+    "createdTimeUtc": "2026-07-17T19:21:18.0008687",
+    "lastUpdatedTimeUtc": "2026-07-17T19:21:19.5042344",
+    "percentComplete": 100,
+    "error": null
+  },
+  "report_id": "8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e",
+  "report_url": "https://app.powerbi.com/groups/e515bafe-7290-4832-ae1d-514be43a9d87/reports/8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e/ReportSection",
+  "export_status": "Succeeded",
+  "export_percent_complete": 100,
+  "export_pdf": "outputs/leatt_powerbi_service_report_export.pdf",
+  "rendered_screenshots": [
+    "outputs/screenshots/powerbi_service_export/powerbi_service_report_page_1.png",
+    "outputs/screenshots/powerbi_service_export/powerbi_service_report_page_2.png",
+    "outputs/screenshots/powerbi_service_export/powerbi_service_report_page_3.png",
+    "outputs/screenshots/powerbi_service_export/powerbi_service_report_page_4.png"
+  ],
+  "fabric_capacity_state_after_export": "Paused"
+}
