@@ -1,0 +1,11 @@
+system,object_or_table,business_object,analytics_use,extraction_pattern
+SAP Business One,OINV / Invoices,A/R invoices,Invoice header and customer totals,Service Layer /b1s/v2/Invoices
+SAP Business One,INV1 / InvoiceLines,A/R invoice lines,"SKU, quantity, price, VAT code, warehouse",Service Layer expands DocumentLines
+SAP Business One,ORIN / CreditNotes,Credit notes/refunds,Returns and VAT reversals,Service Layer /b1s/v2/CreditNotes
+SAP Business One,ORCT / IncomingPayments,Payments,Cash receipts and payment allocation,Service Layer /b1s/v2/IncomingPayments
+SAP Business One,OJDT / JournalEntries,General ledger,Posted accounting entries,Service Layer /b1s/v2/JournalEntries
+SAP Business One,OACT / ChartOfAccounts,Chart of accounts,GL account mapping,Service Layer /b1s/v2/ChartOfAccounts
+SAP Business One,OCRD / BusinessPartners,Customers,Customer master data,Service Layer /b1s/v2/BusinessPartners
+SAP Business One,OITM / Items,Products/items,Item master and inventory mapping,Service Layer /b1s/v2/Items
+SAP BW,BEx Query / CDS Query,Analytic query,"Finance actuals, sales cubes, inventory, profitability",SAP Gateway OData query
+SAP Commerce Cloud / Hybris,Orders / Customers / Products,Commerce platform,"Digital order, product, promotion and customer journey source",OCC APIs / Integration APIs / Data Hub

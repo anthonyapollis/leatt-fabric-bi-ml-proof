@@ -1,0 +1,11 @@
+month,exception_type,difference_zar,owner,status,source_system,accounting_system_target
+2025-02,VAT rounding above tolerance,8.25,Finance Ops,Open,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2024-04,Payment settlement timing difference,149.04,Data Steward,In Review,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2025-12,Refund posted after sales period,289.84,BI Engineer,Resolved,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2024-07,Missing SAP document number,430.63,SAP Analyst,Open,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2025-07,Product category mapping needs review,571.43,Revenue Accountant,In Review,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2026-02,VAT rounding above tolerance,712.22,Finance Ops,Open,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2024-12,Payment settlement timing difference,853.02,Data Steward,In Review,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2026-01,Refund posted after sales period,993.81,BI Engineer,Resolved,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2024-05,Missing SAP document number,1134.61,SAP Analyst,Open,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse
+2025-06,Product category mapping needs review,1275.4,Revenue Accountant,In Review,Generated ecommerce fact table,SAP Business One / SAP BW / Fabric Warehouse

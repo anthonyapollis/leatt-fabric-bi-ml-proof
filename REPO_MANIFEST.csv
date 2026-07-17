@@ -42,3 +42,7 @@ src/python/add_evidence_sources_to_reports.py,16896
 src/python/add_growth_ai_marketing_pack.py,35729
 src/python/build_leatt_bi_ml_package.py,52835
 src/sql/fabric_gold_model.sql,1357
+leatt_accounting_reconciliation_governance_sap_pack.xlsx,627985
+leatt_accounting_governance_sap_report.pdf,257690
+leatt_ecommerce_bi_ml_finance_governance_master.xlsx,7813520
+SAP_ACCOUNTING_GOVERNANCE_INTEGRATION.md,1976

@@ -1,0 +1,9 @@
+governance_topic,policy
+Data owner,Finance owns revenue/VAT definitions; ecommerce owns source transactions; BI owns semantic model.
+System of record,"Posted statutory accounting should come from SAP Business One or SAP BW, not the web scrape."
+Lineage,Website/API/SAP sources -> Fabric Data Factory -> OneLake Bronze -> Silver validated tables -> Gold finance mart -> Power BI.
+Access control,"Use workspace roles, item permissions, RLS by business unit/geography, and least-privilege service principals."
+Data quality,"Row counts, duplicate checks, missing SAP document checks, VAT recalc checks, and GL balance checks."
+Retention,Keep raw source files and close packs for audit retention; keep synthetic demo data clearly labelled.
+Privacy,Mask direct identifiers and separate customer PII from analytical customer keys.
+Change management,"Git-controlled pipeline, SQL, DAX, data-quality rules and documentation; promote through Dev/Test/Prod."

@@ -1,0 +1,7 @@
+question,answer
+Is it needed?,"No, not for this current Leatt demo. The website/catalog and synthetic transaction model are enough for BI/ML proof."
+Is it possible?,Yes. SAP Hybris is now SAP Commerce Cloud and can act as the ecommerce/order/catalog source if the business runs commerce on SAP.
+Where it fits,"Upstream commerce platform before ERP/accounting. It feeds orders, carts, customers, products, promotions and pricing into Fabric and SAP B1/ERP."
+Accounting role,"Not the final accounting ledger. Use SAP Business One/SAP ERP/SAP BW for statutory finance, GL, VAT, payments and inventory postings."
+Analytics role,"Excellent source for customer journey, product catalogue, promotions, search, abandoned cart, order lifecycle and personalization analytics."
+Integration,"Use OCC APIs, Integration APIs, Data Hub/Integration Suite patterns, or exported order/product feeds into Fabric Data Factory."

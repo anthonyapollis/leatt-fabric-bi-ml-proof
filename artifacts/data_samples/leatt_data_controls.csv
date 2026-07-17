@@ -1,0 +1,9 @@
+control_area,control_name,control_description,owner,frequency
+Completeness,Daily row count control,"Compare ecommerce lines, invoices, payments and refunds by day/month",Finance Ops,Daily
+Accuracy,VAT recalculation,Recompute VAT at 15% and compare to source tax amount within tolerance,Revenue Accountant,Daily
+Validity,SAP document existence,Every BI order/invoice should map to a SAP document number after posting,SAP Analyst,Daily
+Consistency,SKU and GL mapping,"Every product category maps to valid SAP item group, revenue account, COGS account and VAT code",Data Steward,Weekly
+Timeliness,Pipeline SLA,Fabric/ADF loads must finish before finance close cut-off,BI Engineer,Daily
+Reconciliation,Sales-to-bank control,Sales incl. VAT less refunds/fees equals payment settlement within timing tolerance,Finance Ops,Daily
+Governance,PII minimization,Hash/anonymize customer identifiers for analytics where detailed identity is not needed,Data Owner,Monthly
+Auditability,Immutable evidence,"Persist source files, run logs, row counts, hashes and exception register",Data Governance Lead,Monthly close

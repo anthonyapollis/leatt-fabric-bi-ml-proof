@@ -1,0 +1,241 @@
+period,debit_credit,gl_account,description,amount_zar
+2024-01,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,119618496.62553999
+2024-01,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2831675.8344599996
+2024-01,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,65223821.63999999
+2024-01,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,111923946.02608696
+2024-01,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,15971761.625217384
+2024-01,CR,1200 Inventory,Inventory relief for sold goods,65223821.63999999
+2024-01,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5445535.191304348
+2024-01,DR,2200 VAT Output Tax,VAT reversal on refunds,816830.2786956523
+2024-02,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,120430888.01814002
+2024-02,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2854019.95186
+2024-02,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,65691661.01000001
+2024-02,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,112807112.72173914
+2024-02,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16080640.169999998
+2024-02,CR,1200 Inventory,Inventory relief for sold goods,65691661.01000001
+2024-02,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5602844.921739131
+2024-02,DR,2200 VAT Output Tax,VAT reversal on refunds,840426.7382608689
+2024-03,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,139976089.17576003
+2024-03,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3312517.5142400004
+2024-03,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,76319944.68000002
+2024-03,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,130929546.01739132
+2024-03,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18689818.263913043
+2024-03,CR,1200 Inventory,Inventory relief for sold goods,76319944.68000002
+2024-03,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6330757.591304348
+2024-03,DR,2200 VAT Output Tax,VAT reversal on refunds,949613.6386956517
+2024-04,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,136637089.9964
+2024-04,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3232754.4436
+2024-04,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,74505550.33000001
+2024-04,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,127776855.47826089
+2024-04,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18243892.753043473
+2024-04,CR,1200 Inventory,Inventory relief for sold goods,74505550.33000001
+2024-04,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6150903.791304348
+2024-04,DR,2200 VAT Output Tax,VAT reversal on refunds,922635.5686956514
+2024-05,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,137855762.92976
+2024-05,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3269678.08024
+2024-05,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,75345315.31000002
+2024-05,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,129236287.75652176
+2024-05,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18407666.218695648
+2024-05,CR,1200 Inventory,Inventory relief for sold goods,75345315.31000002
+2024-05,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6518512.965217391
+2024-05,DR,2200 VAT Output Tax,VAT reversal on refunds,977776.9447826082
+2024-06,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,128911747.93510002
+2024-06,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3050429.0949000004
+2024-06,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,70279220.18000002
+2024-06,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,120570319.95652176
+2024-06,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,17212457.873478256
+2024-06,CR,1200 Inventory,Inventory relief for sold goods,70279220.18000002
+2024-06,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5820600.800000001
+2024-06,DR,2200 VAT Output Tax,VAT reversal on refunds,873090.1199999992
+2024-07,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,119827713.89886001
+2024-07,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2835335.73114
+2024-07,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,65328701.49000001
+2024-07,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,112068605.97391306
+2024-07,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,15999528.212608686
+2024-07,CR,1200 Inventory,Inventory relief for sold goods,65328701.49000001
+2024-07,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5405084.55652174
+2024-07,DR,2200 VAT Output Tax,VAT reversal on refunds,810762.6834782604
+2024-08,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,108700895.61426
+2024-08,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2582681.77574
+2024-08,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,59432639.77000001
+2024-08,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,102082283.62608697
+2024-08,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,14515249.224782601
+2024-08,CR,1200 Inventory,Inventory relief for sold goods,59432639.77000001
+2024-08,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5313955.460869566
+2024-08,DR,2200 VAT Output Tax,VAT reversal on refunds,797093.3191304347
+2024-09,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,99371482.38402
+2024-09,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2353288.56598
+2024-09,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,54212611.230000004
+2024-09,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,93015358.33913045
+2024-09,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,13268448.384782601
+2024-09,CR,1200 Inventory,Inventory relief for sold goods,54212611.230000004
+2024-09,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,4559035.773913044
+2024-09,DR,2200 VAT Output Tax,VAT reversal on refunds,683855.3660869561
+2024-10,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,98197334.99280001
+2024-10,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2330302.7572
+2024-10,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,53764306.04000001
+2024-10,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,92106828.34782611
+2024-10,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,13112300.576086944
+2024-10,CR,1200 Inventory,Inventory relief for sold goods,53764306.04000001
+2024-10,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,4691491.173913044
+2024-10,DR,2200 VAT Output Tax,VAT reversal on refunds,703723.6760869566
+2024-11,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,119140661.94966
+2024-11,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2819754.64034
+2024-11,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,72393511.55
+2024-11,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,111452752.5826087
+2024-11,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,15907880.424782604
+2024-11,CR,1200 Inventory,Inventory relief for sold goods,72393511.55
+2024-11,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5400216.417391306
+2024-11,DR,2200 VAT Output Tax,VAT reversal on refunds,810032.462608695
+2024-12,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,133081950.1884
+2024-12,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3156681.0616
+2024-12,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,81018427.69000003
+2024-12,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,124770002.43478262
+2024-12,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,17770256.249999996
+2024-12,CR,1200 Inventory,Inventory relief for sold goods,81018427.69000003
+2024-12,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6301627.434782609
+2024-12,DR,2200 VAT Output Tax,VAT reversal on refunds,945244.1152173905
+2025-01,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,121022467.20848002
+2025-01,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2872910.9015200003
+2025-01,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,66104687.81000001
+2025-01,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,113553790.57391307
+2025-01,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16160266.709999988
+2025-01,CR,1200 Inventory,Inventory relief for sold goods,66104687.81000001
+2025-01,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5818679.173913044
+2025-01,DR,2200 VAT Output Tax,VAT reversal on refunds,872801.8760869559
+2025-02,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,117192609.75430001
+2025-02,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2783051.5757
+2025-02,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,64128805.790000014
+2025-02,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,110002038.5652174
+2025-02,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,15648999.303913038
+2025-02,CR,1200 Inventory,Inventory relief for sold goods,64128805.790000014
+2025-02,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5675376.539130436
+2025-02,DR,2200 VAT Output Tax,VAT reversal on refunds,851306.4808695652
+2025-03,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,140284527.07218
+2025-03,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3321218.13782
+2025-03,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,76514420.96
+2025-03,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,131273444.18260871
+2025-03,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18731184.157826077
+2025-03,CR,1200 Inventory,Inventory relief for sold goods,76514420.96
+2025-03,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6398883.130434783
+2025-03,DR,2200 VAT Output Tax,VAT reversal on refunds,959832.4695652174
+2025-04,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,137686372.0898
+2025-04,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3265792.4001999996
+2025-04,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,75201484.02999999
+2025-04,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,129082703.56521739
+2025-04,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18385064.933478255
+2025-04,CR,1200 Inventory,Inventory relief for sold goods,75201484.02999999
+2025-04,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6515604.008695652
+2025-04,DR,2200 VAT Output Tax,VAT reversal on refunds,977340.6013043476
+2025-05,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,140348164.05850002
+2025-05,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3323870.6215
+2025-05,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,76577354.60000001
+2025-05,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,131378285.43478262
+2025-05,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18739830.610434767
+2025-05,CR,1200 Inventory,Inventory relief for sold goods,76577354.60000001
+2025-05,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6446081.365217392
+2025-05,DR,2200 VAT Output Tax,VAT reversal on refunds,966912.204782608
+2025-06,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,128161897.51866001
+2025-06,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3034226.4913399997
+2025-06,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,69895474.38000001
+2025-06,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,119929900.84347826
+2025-06,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,17112537.914347824
+2025-06,CR,1200 Inventory,Inventory relief for sold goods,69895474.38000001
+2025-06,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5846314.747826086
+2025-06,DR,2200 VAT Output Tax,VAT reversal on refunds,876947.2121739127
+2025-07,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,121396203.74808002
+2025-07,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2874110.4119200003
+2025-07,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,66248926.92000002
+2025-07,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,113601202.05217393
+2025-07,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16209171.412173914
+2025-07,CR,1200 Inventory,Inventory relief for sold goods,66248926.92000002
+2025-07,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5540059.304347827
+2025-07,DR,2200 VAT Output Tax,VAT reversal on refunds,831008.8956521731
+2025-08,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,110776391.60971999
+2025-08,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2620374.08028
+2025-08,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,60377468.339999996
+2025-08,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,103572098.03478262
+2025-08,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,14790882.481304333
+2025-08,CR,1200 Inventory,Inventory relief for sold goods,60377468.339999996
+2025-08,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,4966214.826086957
+2025-08,DR,2200 VAT Output Tax,VAT reversal on refunds,744932.2239130428
+2025-09,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,98564888.82962002
+2025-09,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2334721.89038
+2025-09,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,53796556.77
+2025-09,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,92281497.64347827
+2025-09,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,13160818.789565211
+2025-09,CR,1200 Inventory,Inventory relief for sold goods,53796556.77
+2025-09,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,4542705.713043478
+2025-09,DR,2200 VAT Output Tax,VAT reversal on refunds,681405.856956521
+2025-10,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,99600283.45259999
+2025-10,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2357120.9573999997
+2025-10,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,54293258.02999999
+2025-10,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,93166836.26086956
+2025-10,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,13298791.87956521
+2025-10,CR,1200 Inventory,Inventory relief for sold goods,54293258.02999999
+2025-10,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,4508223.730434783
+2025-10,DR,2200 VAT Output Tax,VAT reversal on refunds,676233.5595652172
+2025-11,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,120194397.90627998
+2025-11,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2850195.7937199995
+2025-11,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,73213703.47999999
+2025-11,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,112655960.22608696
+2025-11,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16049294.83043477
+2025-11,CR,1200 Inventory,Inventory relief for sold goods,73213703.47999999
+2025-11,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5660661.35652174
+2025-11,DR,2200 VAT Output Tax,VAT reversal on refunds,849099.2034782609
+2025-12,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,132254432.85895999
+2025-12,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3128110.09104
+2025-12,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,80316450.13
+2025-12,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,123640715.06086957
+2025-12,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,17658592.558695637
+2025-12,CR,1200 Inventory,Inventory relief for sold goods,80316450.13
+2025-12,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5916764.669565218
+2025-12,DR,2200 VAT Output Tax,VAT reversal on refunds,887514.7004347825
+2026-01,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,120280311.42226002
+2026-01,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2845752.07774
+2026-01,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,65511605.290000014
+2026-01,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,112480319.27826089
+2026-01,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16059921.326086957
+2026-01,CR,1200 Inventory,Inventory relief for sold goods,65511605.290000014
+2026-01,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5414177.104347826
+2026-01,DR,2200 VAT Output Tax,VAT reversal on refunds,812126.565652174
+2026-02,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,117061060.37130003
+2026-02,DR,6100 Payment Gateway Fees,Estimated payment processing fees,2775224.1187000005
+2026-02,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,63923803.06000002
+2026-02,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,109692652.91304351
+2026-02,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,15630819.716086946
+2026-02,CR,1200 Inventory,Inventory relief for sold goods,63923803.06000002
+2026-02,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,5487188.139130436
+2026-02,DR,2200 VAT Output Tax,VAT reversal on refunds,823078.2208695645
+2026-03,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,138504173.62526003
+2026-03,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3281576.22474
+2026-03,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,75611391.61000001
+2026-03,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,129706570.1478261
+2026-03,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18493793.45869565
+2026-03,CR,1200 Inventory,Inventory relief for sold goods,75611391.61000001
+2026-03,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6414613.75652174
+2026-03,DR,2200 VAT Output Tax,VAT reversal on refunds,962192.0634782603
+2026-04,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,137042684.46656
+2026-04,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3249726.40344
+2026-04,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,74837161.46000001
+2026-04,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,128447683.93043481
+2026-04,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18299010.113478247
+2026-04,CR,1200 Inventory,Inventory relief for sold goods,74837161.46000001
+2026-04,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6454283.173913044
+2026-04,DR,2200 VAT Output Tax,VAT reversal on refunds,968142.4760869564
+2026-05,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,140086255.18150005
+2026-05,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3321574.3385000005
+2026-05,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,76442338.22000003
+2026-05,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,131287523.2608696
+2026-05,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,18705369.067826077
+2026-05,CR,1200 Inventory,Inventory relief for sold goods,76442338.22000003
+2026-05,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6585062.8086956525
+2026-05,DR,2200 VAT Output Tax,VAT reversal on refunds,987759.421304347
+2026-06,DR,1100 Payment Clearing / Bank,Customer receipts incl. VAT less refunds/fees,126660313.30092001
+2026-06,DR,6100 Payment Gateway Fees,Estimated payment processing fees,3004767.1090800003
+2026-06,DR,5000 Cost of Goods Sold,Estimated COGS from margin model,69239558.91000003
+2026-06,CR,4000 Ecommerce Sales Revenue,Sales revenue excluding VAT,118765498.38260871
+2026-06,CR,2200 VAT Output Tax,VAT output tax on ecommerce sales net of refunds,16912836.575217392
+2026-06,CR,1200 Inventory,Inventory relief for sold goods,69239558.91000003
+2026-06,DR,4100 Sales Returns Contra Revenue,Refunds excluding VAT,6013254.547826088
+2026-06,DR,2200 VAT Output Tax,VAT reversal on refunds,901988.1821739124
