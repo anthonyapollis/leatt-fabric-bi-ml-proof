@@ -45,8 +45,9 @@ footer{background:#000;color:#888;text-align:center;padding:26px;font-size:.84re
 <nav><span class="brand">LEATT GROWTH OS</span>
 <a href="#story">Story</a><a href="#engine">Fabric engine</a><a href="#money">Money map</a>
 <a href="#issues">Issues &amp; prevention</a><a href="#growth">Growth loop</a>
-<a href="#finance">Finance</a><a href="#azure">Azure &amp; cost</a>
+<a href="#finance">Finance</a>
 <span class="sp"></span>
+<a class="btn" href="artifacts/reports/Leatt_Growth_OS_Fabric_Workbook.xlsx">Excel workbook</a>
 <a class="btn" href="https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof" target="_blank">GitHub repo</a></nav>
 
 <header><h1>LEATT GROWTH OS</h1>
@@ -175,14 +176,6 @@ Finance trust the BI numbers enough to post them.</p>
 <h3>Open audit exceptions</h3><table class=""><tr><th>Month</th><th>Exception</th><th>Diff (ZAR)</th><th>Owner</th><th>Status</th></tr><tr><td>2025-02</td><td>VAT rounding above tolerance</td><td>R8.25</td><td>Finance Ops</td><td>Open</td></tr><tr><td>2024-04</td><td>Payment settlement timing difference</td><td>R149.04</td><td>Data Steward</td><td>In Review</td></tr><tr><td>2025-12</td><td>Refund posted after sales period</td><td>R289.84</td><td>BI Engineer</td><td>Resolved</td></tr><tr><td>2024-07</td><td>Missing SAP document number</td><td>R430.63</td><td>SAP Analyst</td><td>Open</td></tr><tr><td>2025-07</td><td>Product category mapping needs review</td><td>R571.43</td><td>Revenue Accountant</td><td>In Review</td></tr><tr><td>2026-02</td><td>VAT rounding above tolerance</td><td>R712.22</td><td>Finance Ops</td><td>Open</td></tr></table>
 <h3>Decision signals monitored</h3><table class=""><tr><th>Signal</th><th>Reading</th><th>Health</th><th>Decision</th></tr><tr><td>Revenue momentum</td><td>R3,994,247,413</td><td>Healthy scale</td><td>Trigger exception commentary in the monthly trading pack.</td></tr><tr><td>Margin quality</td><td>48.5%</td><td>Strong but must be protected</td><td>Protect margin-positive product mix and bundle high-margin items.</td></tr><tr><td>Return leakage</td><td>4.9%</td><td>Watchlist</td><td>Improve sizing, delivery promise, PDP content and post-purchase guidance.</td></tr><tr><td>Hero category concentration</td><td>Apparel R1,759,430,045</td><td>Strategic dependency</td><td>Create availability alerts and category-specific SEO/story pages.</td></tr><tr><td>Channel efficiency</td><td>Direct 100.0x ROAS</td><td>Scale carefully</td><td>Move spend toward efficient journeys; keep paid experiments controlled.</td></tr><tr><td>Data completeness</td><td>2,000,000 rows</td><td>Audit-ready</td><td>Publish source, target, row count and commit ID in every close pack.</td></tr><tr><td>Cloud cost</td><td>Fabric F2 paused</td><td>Controlled</td><td>Resume only for refresh/demo, then pause again.</td></tr></table>
 </div></div>
-
-<section id="azure"><h2>Azure &amp; Fabric — cost discipline</h2>
-<p>Fabric F2 capacity is <b>paused by default</b> and only resumed for active work, then
-suspended again immediately — verified via both the Azure CLI and the portal UI. Full,
-timestamped teardown evidence: <code>docs/AZURE_COST_SHUTDOWN_PROOF.md</code>.</p>
-<p>Tags on the resource itself confirm intent: <code>cost-control: delete-or-pause-after-upload</code>,
-<code>project: leatt-bi-ml</code>, <code>purpose: portfolio-proof</code>.</p>
-</section>
 
 <footer>Leatt Growth OS — Fabric-powered ecommerce intelligence portfolio project<br>
 Data modelled on Leatt's public product catalog (leatt.com) · Not affiliated with Leatt Corporation</footer>

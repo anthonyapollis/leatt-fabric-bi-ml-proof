@@ -157,8 +157,9 @@ footer{{background:#000;color:#888;text-align:center;padding:26px;font-size:.84r
 <nav><span class="brand">LEATT GROWTH OS</span>
 <a href="#story">Story</a><a href="#engine">Fabric engine</a><a href="#money">Money map</a>
 <a href="#issues">Issues &amp; prevention</a><a href="#growth">Growth loop</a>
-<a href="#finance">Finance</a><a href="#azure">Azure &amp; cost</a>
+<a href="#finance">Finance</a>
 <span class="sp"></span>
+<a class="btn" href="artifacts/reports/Leatt_Growth_OS_Fabric_Workbook.xlsx">Excel workbook</a>
 <a class="btn" href="https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof" target="_blank">GitHub repo</a></nav>
 
 <header><h1>LEATT GROWTH OS</h1>
@@ -287,14 +288,6 @@ Finance trust the BI numbers enough to post them.</p>
 <h3>Open audit exceptions</h3>{exc_tbl}
 <h3>Decision signals monitored</h3>{sig_tbl}
 </div></div>
-
-<section id="azure"><h2>Azure &amp; Fabric — cost discipline</h2>
-<p>Fabric F2 capacity is <b>paused by default</b> and only resumed for active work, then
-suspended again immediately — verified via both the Azure CLI and the portal UI. Full,
-timestamped teardown evidence: <code>docs/AZURE_COST_SHUTDOWN_PROOF.md</code>.</p>
-<p>Tags on the resource itself confirm intent: <code>cost-control: delete-or-pause-after-upload</code>,
-<code>project: leatt-bi-ml</code>, <code>purpose: portfolio-proof</code>.</p>
-</section>
 
 <footer>Leatt Growth OS — Fabric-powered ecommerce intelligence portfolio project<br>
 Data modelled on Leatt's public product catalog (leatt.com) · Not affiliated with Leatt Corporation</footer>
