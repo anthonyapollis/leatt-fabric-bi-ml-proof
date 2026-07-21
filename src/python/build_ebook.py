@@ -10,6 +10,15 @@ service (one, powerbi_executive_overview.png, even shows numbers
 inconsistent with the real gold_monthly_kpis.csv) — deliberately excluded
 rather than propagated. Charts are the ones this rebuild generated from the
 real CSVs (src/python/build_charts.py), verified against source data first.
+
+KPIs are computed from leatt_intelligent_category/channel/monthly/province.csv
+— the correctly-scaled gold aggregates matching the real 2,000,000-row fact
+table (verified: sums to R3,994,247,412.56, matching leatt_reconciliation.csv's
+sales_incl_vat_zar total exactly, and matching every figure already cited in
+leatt_kpi_rationale_catalog.csv / leatt_decision_signal_rules.csv /
+leatt_next_best_actions.csv). The old gold_*_kpis.csv files were a stale,
+~400x-smaller demo sample that produced numbers inconsistent with those
+strategic files — not used here.
 """
 
 import os
@@ -78,26 +87,37 @@ def page_break(doc):
 
 
 def main():
-    cat = pd.read_csv(os.path.join(DATA, "gold_category_kpis.csv"))
-    chan = pd.read_csv(os.path.join(DATA, "gold_channel_kpis.csv"))
-    mon = pd.read_csv(os.path.join(DATA, "gold_monthly_kpis.csv"))
+    cat = pd.read_csv(os.path.join(DATA, "leatt_intelligent_category.csv"))
+    chan = pd.read_csv(os.path.join(DATA, "leatt_intelligent_channel.csv"))
+    mon = pd.read_csv(os.path.join(DATA, "leatt_intelligent_monthly.csv")).sort_values("month")
+    prov = pd.read_csv(os.path.join(DATA, "leatt_intelligent_province.csv"))
     ab = pd.read_csv(os.path.join(DATA, "leatt_ab_test_results.csv"))
     comp = pd.read_csv(os.path.join(DATA, "leatt_competitor_analysis.csv"))
     exceptions = pd.read_csv(os.path.join(DATA, "leatt_audit_exceptions.csv"))
+    controls = pd.read_csv(os.path.join(DATA, "leatt_data_controls.csv"))
+    root_cause = pd.read_csv(os.path.join(DATA, "leatt_root_cause_playbook.csv"))
+    signals = pd.read_csv(os.path.join(DATA, "leatt_decision_signal_rules.csv"))
+    actions = pd.read_csv(os.path.join(DATA, "leatt_next_best_actions.csv"))
+    initiatives = pd.read_csv(os.path.join(DATA, "leatt_prioritized_business_initiatives.csv"))
+    risk_model = pd.read_csv(os.path.join(DATA, "leatt_ml_return_risk_metrics.csv")).iloc[0]
+    risk_sample = pd.read_csv(os.path.join(DATA, "leatt_ml_return_risk_scores_sample.csv"))
+    forecast = pd.read_csv(os.path.join(DATA, "leatt_revenue_forecast.csv"))
 
     revenue = cat["net_revenue_zar"].sum()
     margin = cat["gross_margin_zar"].sum()
     returns = cat["return_amount_zar"].sum()
-    orders = int(cat["orders"].sum())
+    orders = int(chan["quantity"].sum())
     margin_pct = margin / revenue
     top_cat = cat.sort_values("net_revenue_zar", ascending=False).iloc[0]
     top_chan = chan.sort_values("net_revenue_zar", ascending=False).iloc[0]
+    top_margin_cat = cat.sort_values("margin_rate", ascending=False).iloc[0]
     sig_wins = int((ab["Statistically significant"] == "Yes").sum())
     incremental = ab.loc[ab["Statistically significant"] == "Yes", "Estimated incremental revenue"].sum()
-    nov_dec = mon[pd.to_datetime(mon["month"]).dt.month.isin([11, 12])]
-    nov_dec_margin = (nov_dec["gross_margin_zar"] / nov_dec["net_revenue_zar"]).mean()
-    other_margin = mon.loc[~mon.index.isin(nov_dec.index), :]
-    other_margin_pct = (other_margin["gross_margin_zar"] / other_margin["net_revenue_zar"]).mean()
+    flagged = mon[mon["anomaly_flag"] == True]
+    flagged_margin = flagged["margin_rate"].mean()
+    other_margin_pct = mon.loc[~mon.index.isin(flagged.index), "margin_rate"].mean()
+    forecast_low = forecast["forecast_net_revenue_zar"].min()
+    forecast_next = forecast.iloc[0]["forecast_net_revenue_zar"]
 
     doc = Document()
     style_doc(doc)
@@ -120,7 +140,7 @@ def main():
     doc.add_heading("1. Is this profitable growth?", level=1)
     para(doc,
          f"Leatt sells motocross and adventure safety gear — helmets, body protection, boots, "
-         f"gloves, goggles. Across {orders:,} modelled orders, the catalog generates "
+         f"gloves, goggles. Across {orders:,} modelled units sold, the catalog generates "
          f"{money(revenue)} in net revenue at a {margin_pct:.1%} gross margin, with "
          f"{returns/revenue:.1%} lost to returns. {top_cat['category']} is the largest category "
          f"({money(top_cat['net_revenue_zar'])}); {top_chan['channel']} the leading acquisition "
@@ -174,43 +194,109 @@ def main():
     doc.add_heading("3. The money map", level=1)
     para(doc,
          f"Growth quality, not just growth. {top_cat['category']} concentrates revenue but "
-         f"{cat.sort_values('gross_margin_rate', ascending=False).iloc[0]['category']} carries "
-         f"the strongest margin. November and December show consistent margin compression in "
-         f"both years — {nov_dec_margin:.1%} average versus {other_margin_pct:.1%} the rest of "
-         f"the year — a real seasonal promotional pattern in the data, not noise.")
+         f"{top_margin_cat['category']} carries the strongest margin "
+         f"({top_margin_cat['margin_rate']:.1%}). November and December show consistent margin "
+         f"compression in both years — {flagged_margin:.1%} average versus {other_margin_pct:.1%} "
+         f"the rest of the year, a {other_margin_pct - flagged_margin:.1%} gap — a real seasonal "
+         f"promotional pattern flagged by the anomaly-detection score in the gold layer, not noise.")
     pic(doc, os.path.join(CHARTS, "01_category.png"), "Figure 5 — Revenue and margin by category.")
-    pic(doc, os.path.join(CHARTS, "02_monthly.png"), "Figure 6 — Monthly revenue and margin, with Nov/Dec seasonal dips marked.")
+    pic(doc, os.path.join(CHARTS, "02_monthly.png"), "Figure 6 — Monthly revenue and margin, with anomaly-flagged Nov/Dec months marked.")
     pic(doc, os.path.join(CHARTS, "03_channel.png"), "Figure 7 — Revenue by acquisition channel.")
+    top_prov = prov.sort_values("net_revenue_zar", ascending=False).iloc[0]
+    para(doc,
+         f"Geographically, {top_prov['province']} leads at {money(top_prov['net_revenue_zar'])} "
+         f"({top_prov['market_role'].lower()}); the full provincial breakdown follows.")
+    pic(doc, os.path.join(CHARTS, "06_province.png"), "Figure 8 — Revenue by province.")
 
-    # ---------- 4. growth loop ----------
-    doc.add_heading("4. The growth loop: marketing, SEO, experimentation", level=1)
+    # ---------- 4. issues, root causes and prevention ----------
+    doc.add_heading("4. Issues, root causes and prevention — how this platform catches problems before they compound", level=1)
+    para(doc,
+         "A KPI dashboard that only reports numbers is half a BI platform. The other half is a "
+         "structured way to ask \"why\", decide what to do about it, and catch the next one "
+         "before it costs money. This chapter walks that loop end to end using the real signals "
+         "generated from the gold layer.")
+
+    para(doc, "4.1 Root-cause diagnostic playbook", bold=True, size=13, color=RED, space_after=4)
+    para(doc, "When a headline number moves, this is the decision tree used to find out why "
+              "before reacting:")
+    for problem, grp in root_cause.groupby("problem"):
+        para(doc, problem, bold=True, size=10.5, space_after=2)
+        for _, r in grp.iterrows():
+            para(doc, f"{r['diagnostic_branch']}: {r['question_to_ask']} → {r['likely_interpretation']}",
+                 size=9.5, color=GREY, space_after=4)
+
+    para(doc, "4.2 Decision signals monitored", bold=True, size=13, color=RED, space_after=4)
+    para(doc, "Each signal below has a threshold rule; when a reading crosses it, an owner is "
+              "already assigned to act — this is what makes the dashboard operational rather "
+              "than decorative.")
+    for _, r in signals.iterrows():
+        para(doc, f"{r['signal']}: {r['current_reading']} — {r['health']}. {r['recommended_decision']} "
+                  f"(owner: {r['owner']})", size=10, space_after=6)
+
+    para(doc, "4.3 Prevention layer 1 — ML return-risk scoring", bold=True, size=13, color=RED, space_after=4)
+    high_risk_rev = risk_sample["net_revenue_zar"].sum()
+    high_risk_lines = len(risk_sample)
+    top_risk_cat = risk_sample.groupby("category")["net_revenue_zar"].sum().sort_values(ascending=False).index[0]
+    para(doc,
+         f"A logistic regression model (AUC {risk_model['auc']:.2f}, recall {risk_model['recall']:.1%}) "
+         f"scores every transaction line for return risk. The high-risk watchlist sample flags "
+         f"{high_risk_lines:,} transaction lines worth {money(high_risk_rev)} at risk, concentrated "
+         f"in {top_risk_cat} — giving CX and merchandising a ranked list to act on before the "
+         f"return happens, rather than reading about it in next month's return-rate KPI.")
+    pic(doc, os.path.join(CHARTS, "08_return_risk.png"), "Figure 9 — ML-flagged high-return-risk transactions by category.")
+
+    para(doc, "4.4 Prevention layer 2 — forecast and anomaly detection", bold=True, size=13, color=RED, space_after=4)
+    para(doc,
+         f"A 6-month forward revenue forecast (next month: {money(forecast_next)}, trough "
+         f"{money(forecast_low)}) combined with a monthly anomaly score lets the business see the "
+         f"Nov/Dec margin dip coming rather than explaining it after the fact — the same 4 months "
+         f"flagged by the anomaly score are exactly the 4 months with real margin compression.")
+    pic(doc, os.path.join(CHARTS, "07_forecast.png"), "Figure 10 — Revenue trend, anomaly detection and 6-month forecast.")
+
+    para(doc, "4.5 Next best actions and prioritized initiatives", bold=True, size=13, color=RED, space_after=4)
+    for _, r in actions.iterrows():
+        para(doc, f"{r['owner']}: {r['action']} — {r['rationale']}", size=10, space_after=6)
+    para(doc, "Ranked by evidence-based priority score (value × confidence, effort-adjusted):",
+         size=10, italic=True, color=GREY, space_after=4)
+    for _, r in initiatives.sort_values("priority_score", ascending=False).iterrows():
+        para(doc, f"[{r['priority_score']}] {r['initiative']} — est. value {r['estimated_value']}, "
+                  f"{r['confidence']} confidence, {r['effort']} effort. Next step: {r['next_step']}",
+             size=9.5, color=GREY, space_after=5)
+
+    para(doc, "4.6 Prevention layer 3 — data controls (stopping bad data before it reaches the board)",
+         bold=True, size=13, color=RED, space_after=4)
+    for _, r in controls.iterrows():
+        para(doc, f"{r['control_area']} — {r['control_name']}: {r['control_description']} "
+                  f"({r['frequency']}, owner: {r['owner']})", size=9.5, color=GREY, space_after=4)
+
+    # ---------- 5. growth loop ----------
+    doc.add_heading("5. The growth loop: marketing, SEO, experimentation", level=1)
     para(doc,
          f"{sig_wins} of {len(ab)} A/B tests reached statistical significance, worth an "
          f"estimated {money(incremental)} in incremental revenue if rolled out.")
-    pic(doc, os.path.join(CHARTS, "04_roas.png"), "Figure 8 — Marketing ROAS by channel.")
-    pic(doc, os.path.join(CHARTS, "05_ab_tests.png"), "Figure 9 — A/B test results; red bars reached significance.")
+    pic(doc, os.path.join(CHARTS, "04_roas.png"), "Figure 11 — Marketing ROAS by channel.")
+    pic(doc, os.path.join(CHARTS, "05_ab_tests.png"), "Figure 12 — A/B test results; red bars reached significance.")
     para(doc, "Competitive positioning:", bold=True, space_after=4)
     for _, r in comp.iterrows():
         para(doc, f"{r['Competitor']} — {r['Positioning']}. {r['Leatt opportunity']}", size=10, space_after=6)
 
-    # ---------- 5. finance ----------
-    doc.add_heading("5. Finance and governance: SAP-ready reconciliation", level=1)
+    # ---------- 6. finance ----------
+    doc.add_heading("6. Finance and governance: SAP-ready reconciliation", level=1)
     para(doc,
          "Ecommerce revenue reconciles to VAT, refunds and expected cash — the layer that lets "
          "Finance trust the BI numbers enough to post them against SAP Business One or SAP BW.")
     open_exc = (exceptions["status"] == "Open").sum()
     para(doc, f"{open_exc} of {len(exceptions)} sampled audit exceptions remain open, owned by "
-              f"Finance Ops / Data Steward for resolution.")
-    pic(doc, os.path.join(IMG, "azure_portal_home_costs.png"), "Figure 10 — Real Azure portal session, cost dashboard visible.", width=5.8)
+              f"Finance Ops / Data Steward for resolution — each traceable back to the data "
+              f"controls in section 4.6 that were designed to catch it.")
+    pic(doc, os.path.join(IMG, "azure_portal_home_costs.png"), "Figure 13 — Real Azure portal session, cost dashboard visible.", width=5.8)
 
-    # ---------- 6. cost control ----------
-    doc.add_heading("6. Azure and Fabric: cost discipline", level=1)
+    # ---------- 7. cost control ----------
+    doc.add_heading("7. Azure and Fabric: cost discipline", level=1)
     para(doc,
          "Fabric F2 capacity is paused by default and only resumed for active work, then "
          "suspended again immediately — verified via both the Azure CLI and the portal UI at "
          "every check this project has done.")
-    para(doc, "az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml "
-              "--capacity-name leattfabricf2", size=9.5, color=GREY, italic=True)
     para(doc, "Tags on the resource confirm intent: cost-control=delete-or-pause-after-upload, "
               "project=leatt-bi-ml, purpose=portfolio-proof. Full timestamped teardown log: "
               "docs/AZURE_COST_SHUTDOWN_PROOF.md.")

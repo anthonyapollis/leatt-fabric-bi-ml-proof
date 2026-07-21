@@ -6,3 +6,7 @@ Platform,CDN/assets,HTML uses cdn.shopify.com and /cdn/shop/t/ theme asset paths
 Platform,Currency/localization,cart.js returns currency ZAR for ZA storefront,Medium
 SAP Hybris,SAP Commerce Cloud possibility,Possible generally but no public evidence that za.leatt.com uses SAP Commerce Cloud,Medium
 Finance,SAP Business One or SAP BW fit,Best as accounting/finance source of record if implemented by business,High
+Platform,AI agent commerce,"llms.txt and agents.md both live (4.3KB each); site implements Universal Commerce Protocol with a real MCP endpoint (/api/ucp/mcp) exposing search_catalog/create_cart/create_checkout tools",High
+Platform,Security header,"Strict-Transport-Security: max-age=0 despite includeSubDomains and preload flags — HSTS is effectively disabled in practice",High
+Platform,Sitemap freshness,"sitemap_products_1.xml: all 1,199 sampled product URLs share one identical lastmod value equal to fetch time, not real per-product edit dates",High
+Platform,Root domain behavior,leatt.com (no za subdomain) 301-redirects to za.leatt.com — consistent with Shopify Markets geo-routing but only verified from one egress IP this session,Medium

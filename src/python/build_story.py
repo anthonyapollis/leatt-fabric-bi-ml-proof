@@ -48,9 +48,10 @@ def table(df, cols, fmts=None, cls=""):
 
 
 def main():
-    cat = pd.read_csv(os.path.join(DATA, "gold_category_kpis.csv"))
-    chan = pd.read_csv(os.path.join(DATA, "gold_channel_kpis.csv"))
-    mon = pd.read_csv(os.path.join(DATA, "gold_monthly_kpis.csv"))
+    cat = pd.read_csv(os.path.join(DATA, "leatt_intelligent_category.csv"))
+    chan = pd.read_csv(os.path.join(DATA, "leatt_intelligent_channel.csv"))
+    mon = pd.read_csv(os.path.join(DATA, "leatt_intelligent_monthly.csv")).sort_values("month")
+    prov = pd.read_csv(os.path.join(DATA, "leatt_intelligent_province.csv"))
     roi = pd.read_csv(os.path.join(DATA, "leatt_marketing_roi.csv")).sort_values("roas", ascending=False)
     ab = pd.read_csv(os.path.join(DATA, "leatt_ab_test_results.csv"))
     comp = pd.read_csv(os.path.join(DATA, "leatt_competitor_analysis.csv"))
@@ -58,17 +59,31 @@ def main():
     recon = pd.read_csv(os.path.join(DATA, "leatt_reconciliation.csv"))
     exceptions = pd.read_csv(os.path.join(DATA, "leatt_audit_exceptions.csv"))
     signals = pd.read_csv(os.path.join(DATA, "leatt_decision_signal_rules.csv"))
+    root_cause = pd.read_csv(os.path.join(DATA, "leatt_root_cause_playbook.csv"))
+    actions = pd.read_csv(os.path.join(DATA, "leatt_next_best_actions.csv"))
+    initiatives = pd.read_csv(os.path.join(DATA, "leatt_prioritized_business_initiatives.csv")).sort_values("priority_score", ascending=False)
+    risk_model = pd.read_csv(os.path.join(DATA, "leatt_ml_return_risk_metrics.csv")).iloc[0]
+    risk_sample = pd.read_csv(os.path.join(DATA, "leatt_ml_return_risk_scores_sample.csv"))
+    forecast = pd.read_csv(os.path.join(DATA, "leatt_revenue_forecast.csv"))
+    controls = pd.read_csv(os.path.join(DATA, "leatt_data_controls.csv"))
 
     revenue = cat["net_revenue_zar"].sum()
     margin = cat["gross_margin_zar"].sum()
     returns = cat["return_amount_zar"].sum()
-    orders = int(cat["orders"].sum())
+    orders = int(chan["quantity"].sum())
     margin_pct = margin / revenue
     return_pct = returns / revenue
     top_cat = cat.sort_values("net_revenue_zar", ascending=False).iloc[0]
     top_chan = chan.sort_values("net_revenue_zar", ascending=False).iloc[0]
+    top_prov = prov.sort_values("net_revenue_zar", ascending=False).iloc[0]
     sig_wins = (ab["Statistically significant"] == "Yes").sum()
     incremental = ab.loc[ab["Statistically significant"] == "Yes", "Estimated incremental revenue"].sum()
+    flagged = mon[mon["anomaly_flag"] == True]
+    flagged_margin = flagged["margin_rate"].mean()
+    other_margin_pct = mon.loc[~mon.index.isin(flagged.index), "margin_rate"].mean()
+    high_risk_rev = risk_sample["net_revenue_zar"].sum()
+    top_risk_cat = risk_sample.groupby("category")["net_revenue_zar"].sum().sort_values(ascending=False).index[0]
+    forecast_next = forecast.iloc[0]["forecast_net_revenue_zar"]
 
     comp_tbl = table(comp, [("Competitor", "Competitor"), ("Positioning", "Positioning"),
                             ("Leatt opportunity", "Leatt opportunity")])
@@ -85,6 +100,15 @@ def main():
                     {"difference_zar": lambda v: f"R{v:,.2f}"})
     sig_tbl = table(signals, [("signal", "Signal"), ("current_reading", "Reading"),
                               ("health", "Health"), ("recommended_decision", "Decision")])
+    root_cause_tbl = table(root_cause, [("problem", "Problem"), ("diagnostic_branch", "Diagnostic branch"),
+                                        ("question_to_ask", "Question to ask"), ("likely_interpretation", "Likely interpretation")])
+    actions_tbl = table(actions, [("owner", "Owner"), ("action", "Action"), ("rationale", "Rationale"),
+                                  ("priority", "Priority")])
+    initiatives_tbl = table(initiatives, [("priority_score", "Score"), ("initiative", "Initiative"),
+                                          ("estimated_value", "Est. value"), ("confidence", "Confidence"),
+                                          ("effort", "Effort"), ("next_step", "Next step")])
+    controls_tbl = table(controls, [("control_area", "Area"), ("control_name", "Control"),
+                                    ("control_description", "Description"), ("owner", "Owner"), ("frequency", "Frequency")])
 
     html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
@@ -120,7 +144,7 @@ figcaption{{font-size:.84rem;color:var(--grey);margin-top:8px;font-style:italic}
 table{{border-collapse:collapse;width:100%;margin:14px 0;background:var(--card);font-size:.88rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}}
 th{{background:var(--ink);color:#fff;text-align:left;padding:9px 12px}}
 td{{padding:8px 12px;border-bottom:1px solid #eee}} tr:nth-child(even) td{{background:#faf8f4}}
-.dark table{{box-shadow:none}} .dark td{{color:#ddd;border-color:#333}} .dark tr:nth-child(even) td{{background:#1e1e1e}}
+.dark table{{background:transparent;box-shadow:none}} .dark td{{color:#eee;border-color:#333}} .dark tr:nth-child(even) td{{background:#1e1e1e}}
 .callout{{background:#fdecea;border-left:5px solid var(--red);padding:14px 20px;border-radius:3px;margin:18px 0}}
 .callout.gold{{background:#fdf6e3;border-color:var(--gold)}}
 code{{background:#eee;padding:2px 6px;border-radius:3px;font-size:.88em}}
@@ -132,7 +156,8 @@ footer{{background:#000;color:#888;text-align:center;padding:26px;font-size:.84r
 
 <nav><span class="brand">LEATT GROWTH OS</span>
 <a href="#story">Story</a><a href="#engine">Fabric engine</a><a href="#money">Money map</a>
-<a href="#growth">Growth loop</a><a href="#finance">Finance</a><a href="#azure">Azure &amp; cost</a>
+<a href="#issues">Issues &amp; prevention</a><a href="#growth">Growth loop</a>
+<a href="#finance">Finance</a><a href="#azure">Azure &amp; cost</a>
 <span class="sp"></span>
 <a class="btn" href="https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof" target="_blank">GitHub repo</a></nav>
 
@@ -143,7 +168,7 @@ scoring, and SAP-ready financial reconciliation.</p>
 <div class="kpis">
 <div class="kpi"><b>{money(revenue)}</b><span>net revenue</span></div>
 <div class="kpi"><b>{margin_pct:.1%}</b><span>gross margin</span></div>
-<div class="kpi"><b>{orders:,}</b><span>orders</span></div>
+<div class="kpi"><b>{orders:,}</b><span>units sold</span></div>
 <div class="kpi"><b>{return_pct:.1%}</b><span>return leakage</span></div>
 <div class="kpi"><b>2,000,000</b><span>modeled transaction lines</span></div>
 </div></header>
@@ -204,14 +229,52 @@ its live URL; visual screenshots require a signed-in interactive session.</div>
 <section id="money"><h2>The money map</h2>
 <p>Growth quality, not just growth: category concentration, channel mix and the margin trend
 across 30 months of modeled trading.</p>
-<figure><img src="{img64(os.path.join(CHARTS,'01_category.png'))}" alt="Category performance"><figcaption>Figure 3 — Apparel dominates revenue; Parts &amp; Accessories carries the highest margin.</figcaption></figure>
-<figure><img src="{img64(os.path.join(CHARTS,'02_monthly.png'))}" alt="Monthly trend"><figcaption>Figure 4 — Revenue and margin over time. November/December show consistent margin compression in both years — a real seasonal promotional pattern, not noise.</figcaption></figure>
-<figure><img src="{img64(os.path.join(CHARTS,'03_channel.png'))}" alt="Channel performance"><figcaption>Figure 5 — Revenue by acquisition channel, with order volume annotated.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'01_category.png'))}" alt="Category performance"><figcaption>Figure 3 — {top_cat['category']} dominates revenue; margin varies materially by category.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'02_monthly.png'))}" alt="Monthly trend"><figcaption>Figure 4 — Revenue and margin over time. Anomaly-flagged Nov/Dec months show consistent margin compression in both years ({flagged_margin:.1%} vs {other_margin_pct:.1%} the rest of the year) — a real seasonal promotional pattern, not noise.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'03_channel.png'))}" alt="Channel performance"><figcaption>Figure 5 — Revenue by acquisition channel.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'06_province.png'))}" alt="Province performance"><figcaption>Figure 6 — Revenue by province. {top_prov['province']} leads at {money(top_prov['net_revenue_zar'])} ({top_prov['market_role'].lower()}).</figcaption></figure>
+</section>
+
+<section id="issues"><h2>Issues, root causes &amp; prevention</h2>
+<p>A KPI dashboard that only reports numbers is half a BI platform. The other half is a
+structured way to ask "why", decide what to do, and catch the next problem before it costs
+money. This section walks that loop end to end using the real signals generated from the gold
+layer — nothing here is a generic best-practice list, every reading below is a live number.</p>
+
+<h3>Root-cause diagnostic playbook</h3>
+<p>When a headline number moves, this is the decision tree used to find out why before reacting:</p>
+{root_cause_tbl}
+
+<h3>Decision signals monitored</h3>
+<p>Each signal has a threshold rule and an assigned owner — this is what makes the dashboard
+operational rather than decorative.</p>
+{sig_tbl}
+
+<div class="g2">
+<div><h3>Prevention layer 1 — ML return-risk scoring</h3>
+<p>A logistic regression model (AUC {risk_model['auc']:.2f}, recall {risk_model['recall']:.1%})
+scores every transaction line for return risk. The high-risk watchlist sample flags
+{len(risk_sample):,} lines worth {money(high_risk_rev)} at risk, concentrated in
+{top_risk_cat} — a ranked list to act on before the return happens.</p>
+<figure><img src="{img64(os.path.join(CHARTS,'08_return_risk.png'))}" alt="Return risk"><figcaption>Figure 7 — ML-flagged high-return-risk transactions by category.</figcaption></figure>
+</div>
+<div><h3>Prevention layer 2 — forecast &amp; anomaly detection</h3>
+<p>A 6-month forward revenue forecast (next month: {money(forecast_next)}) combined with a
+monthly anomaly score lets the business see the Nov/Dec margin dip coming rather than explaining
+it after the fact — the same months flagged by the anomaly score are exactly the months with
+real margin compression.</p>
+<figure><img src="{img64(os.path.join(CHARTS,'07_forecast.png'))}" alt="Forecast"><figcaption>Figure 8 — Revenue trend, anomaly detection and 6-month forecast.</figcaption></figure>
+</div>
+</div>
+
+<h3>Next best actions</h3>{actions_tbl}
+<h3>Prioritized initiatives (ranked by value × confidence, effort-adjusted)</h3>{initiatives_tbl}
+<h3>Prevention layer 3 — data controls (stopping bad data before it reaches the board)</h3>{controls_tbl}
 </section>
 
 <section id="growth"><h2>The growth loop: marketing, SEO, experimentation</h2>
-<figure><img src="{img64(os.path.join(CHARTS,'04_roas.png'))}" alt="Marketing ROAS"><figcaption>Figure 6 — Return on ad spend by channel; red = above 20x.</figcaption></figure>
-<figure><img src="{img64(os.path.join(CHARTS,'05_ab_tests.png'))}" alt="A/B test results"><figcaption>Figure 7 — {sig_wins} of {len(ab)} tests reached statistical significance, worth an estimated {money(incremental)} in incremental revenue if rolled out.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'04_roas.png'))}" alt="Marketing ROAS"><figcaption>Figure 9 — Return on ad spend by channel; red = above 20x.</figcaption></figure>
+<figure><img src="{img64(os.path.join(CHARTS,'05_ab_tests.png'))}" alt="A/B test results"><figcaption>Figure 10 — {sig_wins} of {len(ab)} tests reached statistical significance, worth an estimated {money(incremental)} in incremental revenue if rolled out.</figcaption></figure>
 <h3>A/B test results</h3>{ab_tbl}
 <h3>Competitive positioning</h3>{comp_tbl}
 </section>
@@ -229,7 +292,6 @@ Finance trust the BI numbers enough to post them.</p>
 <p>Fabric F2 capacity is <b>paused by default</b> and only resumed for active work, then
 suspended again immediately — verified via both the Azure CLI and the portal UI. Full,
 timestamped teardown evidence: <code>docs/AZURE_COST_SHUTDOWN_PROOF.md</code>.</p>
-<pre>az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2</pre>
 <p>Tags on the resource itself confirm intent: <code>cost-control: delete-or-pause-after-upload</code>,
 <code>project: leatt-bi-ml</code>, <code>purpose: portfolio-proof</code>.</p>
 </section>
