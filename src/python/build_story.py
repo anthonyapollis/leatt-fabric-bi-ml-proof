@@ -161,26 +161,38 @@ channel ({money(top_chan['net_revenue_zar'])}).</p>
 <figure><img src="{img64(os.path.join(IMG,'leatt_lifestyle_eyewear_collection.png'))}" alt="Eyewear"><figcaption>Lifestyle eyewear</figcaption></figure>
 </div></section>
 
-<section id="engine"><h2>The Fabric engine — real, not simulated</h2>
-<p>This is a genuine Microsoft Fabric deployment, not a diagram of one. A capacity, workspace,
-Lakehouse, Data Factory pipeline item and Power BI report were created via the real Fabric
-REST APIs, with data physically uploaded into OneLake:</p>
+<section id="engine"><h2>The Fabric engine — what's real, and how data actually moves</h2>
+<p>A capacity, workspace, Lakehouse and Power BI report were created via the real Fabric REST
+APIs — these are genuine, live items in the tenant, not a diagram of them:</p>
 <div class="idbox">
 <b>Workspace</b> Apollis &nbsp; <code>e515bafe-7290-4832-ae1d-514be43a9d87</code><br>
 <b>Lakehouse</b> Leatt_BI_ML_Lakehouse &nbsp; <code>dca60749-eaef-410e-9121-ea16eedbc975</code><br>
-<b>Data Factory pipeline</b> pl_leatt_million_row_lakehouse_load &nbsp; <code>9e82c185-e0ac-485d-9810-4bccdcfe6cf9</code><br>
 <b>Power BI report</b> Leatt BI ML Executive Report &nbsp; <code>8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e</code><br>
 <b>Capacity</b> leattfabricf2 (SKU F2, South Africa North) — <b>Paused</b> when not in active use
 </div>
-<h3>OneLake files actually uploaded</h3>
+<h3>How the data actually moved</h3>
+<p>The physical files below were pushed into OneLake by a Python script
+(<code>src/fabric/upload_to_onelake.py</code>) authenticating with an Azure CLI token and
+calling OneLake's storage REST API directly (create-directory, append, flush) — this is the
+real, verified transfer mechanism, confirmed by matching byte counts on both ends.</p>
 <table><tr><th>Layer</th><th>File</th><th>Size</th><th>Purpose</th></tr>
 <tr><td>Bronze</td><td>leatt_ecommerce_transactions_2m.parquet</td><td>90.7 MB</td><td>2,000,000-row transaction fact</td></tr>
 <tr><td>Bronze</td><td>leatt_product_catalog.csv</td><td>8.9 MB</td><td>11,354 Shopify product variants</td></tr>
 <tr><td>Bronze</td><td>leatt_synthetic_customers.csv</td><td>13.5 MB</td><td>180,000 synthetic customers</td></tr>
 <tr><td>Silver</td><td>leatt_customer_ml_scores.csv</td><td>31.0 MB</td><td>Customer propensity/value ML scores</td></tr>
 </table>
-<figure><img src="{img64(os.path.join(IMG,'fabric_data_factory_pipeline_blueprint.png'))}" alt="Data Factory blueprint"><figcaption>Figure 1 — Bronze → Silver → Gold medallion flow implemented in this Fabric workspace.</figcaption></figure>
-<figure><img src="{img64(os.path.join(IMG,'leatt_star_schema_erd.png'))}" alt="Star schema ERD"><figcaption>Figure 2 — Star schema serving the Lakehouse/Power BI semantic model.</figcaption></figure>
+<div class="callout"><b>A Fabric Data Factory pipeline item</b>
+(<code>pl_leatt_million_row_lakehouse_load</code>, <code>9e82c185-e0ac-485d-9810-4bccdcfe6cf9</code>)
+is genuinely registered in the workspace via the Fabric API — proving the integration exists —
+but it was not configured with copy activities and run; the physical move above happened via
+the script. A separate, fully designed pipeline template
+(<code>src/fabric/fabric_data_factory_pipeline_template.json</code>) specifies what a production
+build would do: a Copy activity pulling Leatt's live Shopify product API straight into Bronze,
+a Copy activity landing the transaction parquet into Bronze, and a Notebook activity building
+the Silver Delta table — a real design, presented as a design, not as something proven to have
+executed.</div>
+<figure><img src="{img64(os.path.join(IMG,'fabric_data_factory_pipeline_blueprint.png'))}" alt="Data Factory blueprint"><figcaption>Figure 1 — The intended Bronze → Silver → Gold medallion flow (design target; Bronze/Silver landing is real, Gold is modelled locally today).</figcaption></figure>
+<figure><img src="{img64(os.path.join(IMG,'leatt_star_schema_erd.png'))}" alt="Star schema ERD"><figcaption>Figure 2 — Star schema. Implemented today as a local SQLite warehouse (<code>artifacts/data_samples/*.csv</code> are its Gold-layer exports); <code>src/fabric/fabric_lakehouse_warehouse_ddl.sql</code> is the equivalent starter DDL for Fabric Warehouse/Lakehouse.</figcaption></figure>
 <h3>Semantic model tables</h3>{erd_tbl}
 <div class="callout gold"><b>Honest caveat:</b> the Power BI report was created and bound to the
 semantic model via the real Fabric API (operation succeeded, 100% complete), but an automated

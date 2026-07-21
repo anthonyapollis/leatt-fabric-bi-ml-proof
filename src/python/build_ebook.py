@@ -129,27 +129,39 @@ def main():
     pic(doc, os.path.join(IMG, "leatt_moto_boots_collection.png"), "Figure 2 — Real product catalog evidence: moto boots collection.", width=5.5)
 
     # ---------- 2. engine ----------
-    doc.add_heading("2. The engine: a real Microsoft Fabric deployment", level=1)
+    doc.add_heading("2. The engine: what's real, and how data actually moves", level=1)
     para(doc,
-         "This is a genuine Fabric deployment, not a diagram of one. A capacity, workspace, "
-         "Lakehouse, Data Factory pipeline item and Power BI report were created through the "
-         "actual Fabric REST APIs, with real files uploaded into OneLake:")
+         "A capacity, workspace, Lakehouse and Power BI report were created through the actual "
+         "Fabric REST APIs — genuine, live items in the tenant, not a diagram of them:")
     for line in [
         "Workspace “Apollis” — e515bafe-7290-4832-ae1d-514be43a9d87",
         "Lakehouse “Leatt_BI_ML_Lakehouse” — dca60749-eaef-410e-9121-ea16eedbc975",
-        "Data Factory pipeline “pl_leatt_million_row_lakehouse_load” — 9e82c185-e0ac-485d-9810-4bccdcfe6cf9",
         "Power BI report “Leatt BI ML Executive Report” — 8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e",
         "Capacity “leattfabricf2” (SKU F2, South Africa North) — paused when not in active use",
     ]:
         doc.add_paragraph(line, style="List Bullet")
     para(doc,
-         "OneLake Bronze/Silver files actually uploaded: the 90.7MB, 2,000,000-row transaction "
-         "parquet; an 8.9MB, 11,354-variant product catalog; a 13.5MB, 180,000-row synthetic "
-         "customer file; and a 31.0MB customer ML-score file.")
+         "How the data actually moved: a Python script (src/fabric/upload_to_onelake.py) "
+         "authenticated with an Azure CLI token and called OneLake's storage REST API directly "
+         "(create-directory, append, flush) to push files into Bronze/Silver — this is the real, "
+         "verified transfer mechanism, confirmed by matching byte counts on both ends: the "
+         "90.7MB, 2,000,000-row transaction parquet; an 8.9MB, 11,354-variant product catalog; a "
+         "13.5MB, 180,000-row synthetic customer file; and a 31.0MB customer ML-score file.")
+    para(doc,
+         "A Fabric Data Factory pipeline item (pl_leatt_million_row_lakehouse_load, "
+         "9e82c185-e0ac-485d-9810-4bccdcfe6cf9) is genuinely registered in the workspace via the "
+         "Fabric API, proving the integration exists — but it was not configured with copy "
+         "activities and run; the physical move above happened via the script. A separate, fully "
+         "designed pipeline template (src/fabric/fabric_data_factory_pipeline_template.json) "
+         "specifies what a production build would do: a Copy activity pulling Leatt's live "
+         "Shopify product API into Bronze, a Copy activity landing the transaction parquet into "
+         "Bronze, and a Notebook activity building the Silver Delta table — presented here as a "
+         "design, not as something proven to have executed.",
+         size=9.5, italic=True, color=GREY)
     pic(doc, os.path.join(IMG, "fabric_data_factory_pipeline_blueprint.png"),
-        "Figure 3 — Bronze → Silver → Gold medallion flow implemented in this workspace.")
+        "Figure 3 — The intended Bronze -> Silver -> Gold medallion flow (design target; Bronze/Silver landing is real, Gold is modelled locally today).")
     pic(doc, os.path.join(IMG, "leatt_star_schema_erd.png"),
-        "Figure 4 — Star schema serving the Lakehouse/Power BI semantic model.")
+        "Figure 4 — Star schema. Implemented today as a local SQLite warehouse; fabric_lakehouse_warehouse_ddl.sql is the equivalent starter DDL for Fabric.")
     para(doc,
          "Honest caveat: the Power BI report was created and bound to the semantic model via "
          "the real Fabric API (operation succeeded, 100% complete), but an automated service "
