@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "FabricProof",
+  "position": {
+    "x": 30,
+    "y": 100,
+    "z": 40,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 40
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FabricProof"
+                    }
+                  },
+                  "Property": "artifact"
+                }
+              },
+              "queryRef": "FabricProof.artifact",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FabricProof"
+                    }
+                  },
+                  "Property": "value"
+                }
+              },
+              "queryRef": "FabricProof.value",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "RiskTable",
+  "position": {
+    "x": 650,
+    "y": 390,
+    "z": 33,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 33
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "risk_band"
+                }
+              },
+              "queryRef": "MLReturnRisk.risk_band",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "MLReturnRisk.category",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "avg_risk"
+                }
+              },
+              "queryRef": "MLReturnRisk.avg_risk",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "actual_return_rate"
+                }
+              },
+              "queryRef": "MLReturnRisk.actual_return_rate",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

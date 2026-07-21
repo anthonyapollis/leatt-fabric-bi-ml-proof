@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "RiskReturnRate",
+  "position": {
+    "x": 650,
+    "y": 100,
+    "z": 31,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 31
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "risk_band"
+                }
+              },
+              "queryRef": "MLReturnRisk.risk_band",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "actual_return_rate"
+                }
+              },
+              "queryRef": "MLReturnRisk.actual_return_rate",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

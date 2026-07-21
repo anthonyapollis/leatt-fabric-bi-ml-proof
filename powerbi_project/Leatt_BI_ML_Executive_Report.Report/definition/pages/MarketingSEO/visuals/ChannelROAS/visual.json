@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ChannelROAS",
+  "position": {
+    "x": 650,
+    "y": 100,
+    "z": 21,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 21
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ChannelROI"
+                    }
+                  },
+                  "Property": "channel"
+                }
+              },
+              "queryRef": "ChannelROI.channel",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ChannelROI"
+                    }
+                  },
+                  "Property": "roas"
+                }
+              },
+              "queryRef": "ChannelROI.roas",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

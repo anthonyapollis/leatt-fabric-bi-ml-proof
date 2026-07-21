@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "ChannelReturn",
+  "position": {
+    "x": 650,
+    "y": 390,
+    "z": 23,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 23
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ChannelROI"
+                    }
+                  },
+                  "Property": "channel"
+                }
+              },
+              "queryRef": "ChannelROI.channel",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ChannelROI"
+                    }
+                  },
+                  "Property": "return_amount_zar"
+                }
+              },
+              "queryRef": "ChannelROI.return_amount_zar",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

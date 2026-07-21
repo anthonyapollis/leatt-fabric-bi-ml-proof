@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "RowsByMonth",
+  "position": {
+    "x": 30,
+    "y": 390,
+    "z": 42,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 42
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MonthlyTrend"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "MonthlyTrend.month",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MonthlyTrend"
+                    }
+                  },
+                  "Property": "quantity"
+                }
+              },
+              "queryRef": "MonthlyTrend.quantity",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

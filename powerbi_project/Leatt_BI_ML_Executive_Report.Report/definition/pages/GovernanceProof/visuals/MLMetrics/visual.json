@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "MLMetrics",
+  "position": {
+    "x": 650,
+    "y": 100,
+    "z": 41,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 41
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLMetrics"
+                    }
+                  },
+                  "Property": "metric"
+                }
+              },
+              "queryRef": "MLMetrics.metric",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLMetrics"
+                    }
+                  },
+                  "Property": "value"
+                }
+              },
+              "queryRef": "MLMetrics.value",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

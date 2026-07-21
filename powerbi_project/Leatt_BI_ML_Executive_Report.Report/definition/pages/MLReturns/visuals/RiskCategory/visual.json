@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "RiskCategory",
+  "position": {
+    "x": 30,
+    "y": 390,
+    "z": 32,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 32
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "MLReturnRisk.category",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MLReturnRisk"
+                    }
+                  },
+                  "Property": "avg_risk"
+                }
+              },
+              "queryRef": "MLReturnRisk.avg_risk",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
