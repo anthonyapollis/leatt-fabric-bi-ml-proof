@@ -151,13 +151,13 @@ def main():
     # ---------- 2. engine ----------
     doc.add_heading("2. The engine: what's real, and how data actually moves", level=1)
     para(doc,
-         "A capacity, workspace, Lakehouse and Power BI report were created through the actual "
-         "Fabric REST APIs — genuine, live items in the tenant, not a diagram of them:")
+         "The portfolio shows a Fabric-ready architecture and public-safe proof trail. Live tenant "
+         "identifiers are redacted in the public version:")
     for line in [
-        "Workspace “Apollis” — e515bafe-7290-4832-ae1d-514be43a9d87",
-        "Lakehouse “Leatt_BI_ML_Lakehouse” — dca60749-eaef-410e-9121-ea16eedbc975",
-        "Power BI report “Leatt BI ML Executive Report” — 8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e",
-        "Capacity “leattfabricf2” (SKU F2, South Africa North) — paused when not in active use",
+        "Workspace proof — public identifiers redacted",
+        "Lakehouse proof — public identifiers redacted",
+        "Power BI proof — public identifiers redacted",
+        "Capacity proof — public identifiers redacted; cost-control proof retained",
     ]:
         doc.add_paragraph(line, style="List Bullet")
     para(doc,
@@ -168,15 +168,11 @@ def main():
          "90.7MB, 2,000,000-row transaction parquet; an 8.9MB, 11,354-variant product catalog; a "
          "13.5MB, 180,000-row synthetic customer file; and a 31.0MB customer ML-score file.")
     para(doc,
-         "A Fabric Data Factory pipeline item (pl_leatt_million_row_lakehouse_load, "
-         "9e82c185-e0ac-485d-9810-4bccdcfe6cf9) is genuinely registered in the workspace via the "
-         "Fabric API, proving the integration exists — but it was not configured with copy "
-         "activities and run; the physical move above happened via the script. A separate, fully "
-         "designed pipeline template (src/fabric/fabric_data_factory_pipeline_template.json) "
-         "specifies what a production build would do: a Copy activity pulling Leatt's live "
-         "Shopify product API into Bronze, a Copy activity landing the transaction parquet into "
-         "Bronze, and a Notebook activity building the Silver Delta table — presented here as a "
-         "design, not as something proven to have executed.",
+         "The public package includes a Fabric Data Factory pipeline template "
+         "(src/fabric/fabric_data_factory_pipeline_template.json). It is presented as a "
+         "production design: Copy activity for the Shopify product API into Bronze, Copy "
+         "activity for transaction parquet into Bronze, and a Notebook activity to build the "
+         "Silver Delta table. Execution-specific tenant details are redacted in the public version.",
          size=9.5, italic=True, color=GREY)
     pic(doc, os.path.join(IMG, "fabric_data_factory_pipeline_blueprint.png"),
         "Figure 3 — The intended Bronze -> Silver -> Gold medallion flow (design target; Bronze/Silver landing is real, Gold is modelled locally today).")

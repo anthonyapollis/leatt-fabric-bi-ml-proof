@@ -157,7 +157,7 @@ def main():
     ws.cell(1, 1, f"Pipeline design: {pipeline['name']}").font = TITLE_FONT
     ws.cell(2, 1, pipeline["description"]).font = SUB_FONT
     ws.cell(3, 1, "Registered as a real Fabric Data Factory pipeline item in the workspace "
-                  "(9e82c185-e0ac-485d-9810-4bccdcfe6cf9) — presented here as a design, not as "
+                  "(pipeline-id-redacted) — presented here as a design, not as "
                   "proven to have executed end to end. The physical data move used the OneLake "
                   "REST API script instead (see Fabric Engine Proof tab).").font = Font(size=10, italic=True)
     acts = pd.json_normalize(pipeline["activities"])

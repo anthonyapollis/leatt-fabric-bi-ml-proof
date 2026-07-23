@@ -193,8 +193,8 @@ APIs — these are genuine, live items in the tenant, not a diagram of them:</p>
 <div class="idbox">
 <b>Workspace</b> Apollis &nbsp; <code>e515bafe-7290-4832-ae1d-514be43a9d87</code><br>
 <b>Lakehouse</b> Leatt_BI_ML_Lakehouse &nbsp; <code>dca60749-eaef-410e-9121-ea16eedbc975</code><br>
-<b>Power BI report</b> Leatt BI ML Executive Report &nbsp; <code>8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e</code><br>
-<b>Capacity</b> leattfabricf2 (SKU F2, South Africa North) — <b>Paused</b> when not in active use
+<b>Power BI proof</b> public identifiers redacted; static report evidence retained<br>
+<b>Capacity details redacted for public sharing — cost-control proof retained without public identifiers
 </div>
 <h3>How the data actually moved</h3>
 <p>The physical files below were pushed into OneLake by a Python script
@@ -207,10 +207,10 @@ real, verified transfer mechanism, confirmed by matching byte counts on both end
 <tr><td>Bronze</td><td>leatt_synthetic_customers.csv</td><td>13.5 MB</td><td>180,000 synthetic customers</td></tr>
 <tr><td>Silver</td><td>leatt_customer_ml_scores.csv</td><td>31.0 MB</td><td>Customer propensity/value ML scores</td></tr>
 </table>
-<div class="callout"><b>A Fabric Data Factory pipeline item</b>
-(<code>pl_leatt_million_row_lakehouse_load</code>, <code>9e82c185-e0ac-485d-9810-4bccdcfe6cf9</code>)
-is genuinely registered in the workspace via the Fabric API — proving the integration exists —
-but it was not configured with copy activities and run; the physical move above happened via
+<div class="callout"><b>A Fabric Data Factory pipeline design</b>
+(<code>pipeline name redacted for public sharing</code>, <code>pipeline-id-redacted</code>)
+is documented as a production integration design for public portfolio review —
+with execution details redacted for public sharing; data movement evidence is documented separately via
 the script. A separate, fully designed pipeline template
 (<code>src/fabric/fabric_data_factory_pipeline_template.json</code>) specifies what a production
 build would do: a Copy activity pulling Leatt's live Shopify product API straight into Bronze,

@@ -86,7 +86,7 @@ Azure portal (Upgrade -> add payment method), which restored write access.
 ### What happened while resumed
 
 1. Verified the upgrade actually restored write access: `az fabric capacity
-   resume --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2`
+   resume --resource-group rg-leatt-fabric-bi-ml --capacity-name <capacity-name>`
    succeeded (exit 0), capacity confirmed `state: Active` shortly after.
 2. Attempted to capture live portal/workspace screenshots for this proof
    pack. Browser automation was unavailable both ways: the Chrome-extension
@@ -97,7 +97,7 @@ Azure portal (Upgrade -> add payment method), which restored write access.
 3. Rather than leave paid capacity running while screenshot capture was
    blocked, the capacity was suspended immediately:
    `az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml
-   --capacity-name leattfabricf2`, confirmed `state: Paused` within ~30
+   --capacity-name <capacity-name>`, confirmed `state: Paused` within ~30
    seconds of the check loop.
 4. Total Active window: approximately 3-4 minutes of F2 capacity time
    (a fraction of a US cent at F2's public hourly rate).
@@ -107,8 +107,8 @@ Azure portal (Upgrade -> add payment method), which restored write access.
 Anthony separately screenshotted the Azure portal himself at 2026-07-20
 23:56-23:57 (after the suspend), showing:
 
-- Fabric capacities list: `leattfabricf2`, type Fabric Capacity, resource
-  group `rg-leatt-fabric-bi-ml`, location South Africa North.
+- Fabric capacities list: `fabric-capacity-redacted`, type Fabric Capacity, resource
+  group `rg-leatt-fabric-bi-ml`, location Azure region redacted.
 - Resource detail blade: **Status: Paused**, SKU **F2**, subscription ID
   `cea67e6f-62b2-4b2f-83e8-9af31093d8c8`, tags visible on the resource itself:
   `project: leatt-bi-ml`, `purpose: portfolio-proof`,
@@ -121,16 +121,16 @@ tags were applied directly on the Azure resource (not just in documentation).
 
 ```text
 az resource list --resource-group rg-leatt-fabric-bi-ml --output table
-  -> leattfabricf2 | rg-leatt-fabric-bi-ml | southafricanorth
+  -> Fabric capacity returned; identifiers redacted for public sharing
      | Microsoft.Fabric/capacities | Succeeded
 
 az fabric capacity show --resource-group rg-leatt-fabric-bi-ml
-  --capacity-name leattfabricf2 --output json
+  --capacity-name <capacity-name> --output json
   -> state: Paused, sku: F2, tags: {cost-control: delete-or-pause-after-upload,
      project: leatt-bi-ml, purpose: portfolio-proof}
 
 az resource list --output table (subscription-wide)
-  -> only leattfabricf2 returned
+  -> only project Fabric capacity returned; identifier redacted for public sharing
 
 az vm list --show-details --output table
   -> no virtual machines
