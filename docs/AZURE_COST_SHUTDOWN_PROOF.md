@@ -24,22 +24,22 @@ Only one project resource was found:
 
 | Name | Resource group | Location | Type | Provisioning status |
 |---|---|---|---|---|
-| leattfabricf2 | rg-leatt-fabric-bi-ml | southafricanorth | Microsoft.Fabric/capacities | Succeeded |
+| fabric-capacity-redacted | rg-leatt-fabric-bi-ml | azure-region-redacted | Microsoft.Fabric/capacities | Succeeded |
 
 ## Fabric Capacity State
 
 Command used:
 
 ```powershell
-az fabric capacity show --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2 --output json
+az fabric capacity show --resource-group <resource-group> --capacity-name <capacity-name> --output json
 ```
 
 Verified state:
 
 ```text
 state: Paused
-sku: F2
-location: South Africa North
+sku: redacted
+location: Azure region redacted
 ```
 
 ## Subscription-Wide Resource Scan
@@ -50,7 +50,7 @@ Command used:
 az resource list --output table
 ```
 
-The scan returned only the Fabric capacity `leattfabricf2`.
+The scan returned only the Fabric capacity `fabric-capacity-redacted`.
 
 ## Virtual Machine Check
 
@@ -64,7 +64,7 @@ No virtual machines were returned.
 
 ## Cost-Control Conclusion
 
-- Fabric F2 capacity is paused.
+- Fabric Fabric capacity is paused.
 - No Azure VMs are running.
 - No additional Azure resources were visible in the subscription scan.
 - No Azure Data Factory, Databricks, SQL Database, App Service, Synapse, OpenAI, or other paid compute resources were visible in the Azure CLI scan.

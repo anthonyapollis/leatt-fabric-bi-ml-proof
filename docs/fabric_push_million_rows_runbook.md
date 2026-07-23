@@ -57,13 +57,13 @@ Generated: 2026-07-17 18:34
 
 ## Completed deployment update - 2026-07-17
 
-Fabric capacity was activated and workspace `Apollis` was assigned to F2 capacity `leattfabricf2`.
+Fabric capacity details are redacted for public sharing.
 
 Created Fabric items:
 
 - Lakehouse: `Leatt_BI_ML_Lakehouse` (`dca60749-eaef-410e-9121-ea16eedbc975`)
 - SQL endpoint: `Leatt_BI_ML_Lakehouse` (`433371a2-1f06-4053-999e-7f8ee95ba5c9`)
-- Data Factory pipeline item: `pl_leatt_million_row_lakehouse_load` (`9e82c185-e0ac-485d-9810-4bccdcfe6cf9`)
+- Data Factory pipeline item: `pipeline name redacted for public sharing` (`pipeline-id-redacted`)
 
 Uploaded OneLake files:
 

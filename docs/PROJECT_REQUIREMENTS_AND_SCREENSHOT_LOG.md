@@ -18,14 +18,14 @@ This file tracks the user requirements, completed proof artifacts, and screensho
 | Item | Value |
 |---|---|
 | Workspace | `Apollis` |
-| Capacity | `leattfabricf2` |
+| Capacity | `fabric-capacity-redacted` |
 | SKU | `F2` |
-| Region | `South Africa North` |
+| Region | `Azure region redacted` |
 | Lakehouse | `Leatt_BI_ML_Lakehouse` |
 | Lakehouse ID | `dca60749-eaef-410e-9121-ea16eedbc975` |
 | SQL endpoint ID | `433371a2-1f06-4053-999e-7f8ee95ba5c9` |
-| Data Factory pipeline | `pl_leatt_million_row_lakehouse_load` |
-| Pipeline ID | `9e82c185-e0ac-485d-9810-4bccdcfe6cf9` |
+| Data Factory pipeline | `pipeline name redacted for public sharing` |
+| Pipeline ID | `pipeline-id-redacted` |
 
 ## Uploaded data
 
@@ -59,8 +59,8 @@ YYYYMMDD_HHMM_context_short-description.png
 
 ## Cost control
 
-Capacity `leattfabricf2` is active. Pause when done:
+Capacity `fabric-capacity-redacted` is active. Pause when done:
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```

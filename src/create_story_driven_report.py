@@ -228,7 +228,7 @@ def story_pages(ctx: dict, styles) -> list:
         PageBreak(),
         Paragraph("8. The Portfolio Message", styles["Chapter"]),
         Paragraph(
-            "This project demonstrates the full senior BI developer arc: source research, data engineering, Fabric/F2 capacity use, Lakehouse upload, semantic modeling, Power BI report creation, ML, governance, SAP/accounting thinking, AI SEO and Git proof.",
+            "This project demonstrates the full senior BI developer arc: source research, data engineering, Fabric/Fabric capacity use, Lakehouse upload, semantic modeling, Power BI report creation, ML, governance, SAP/accounting thinking, AI SEO and Git proof.",
             styles["BodyText"],
         ),
         Paragraph(

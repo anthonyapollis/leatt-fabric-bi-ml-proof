@@ -236,7 +236,7 @@ def write_definition_files(payload: dict[str, Any], folder: Path) -> None:
 def main() -> None:
     proof = read_proof()
     token = az_token()
-    report_name = f"Leatt BI ML Executive Report {datetime.now().strftime('%Y%m%d%H%M')}"
+    report_name = f"Power BI executive report {datetime.now().strftime('%Y%m%d%H%M')}"
     payload = report_definition(proof["dataset_id"], report_name)
     report_folder = REPORT_ROOT / f"{report_name}.Report"
     write_definition_files(payload, report_folder)

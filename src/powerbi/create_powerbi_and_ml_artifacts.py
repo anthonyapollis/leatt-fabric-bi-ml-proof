@@ -183,10 +183,10 @@ def prepare_powerbi_tables(data: dict[str, pd.DataFrame], ml_segment: pd.DataFra
     fabric = pd.DataFrame(
         [
             ("Workspace", "Apollis"),
-            ("Capacity", "leattfabricf2 / F2 / South Africa North"),
+            ("Capacity", "fabric-capacity-redacted / SKU redacted / Azure region redacted"),
             ("Lakehouse", "Leatt_BI_ML_Lakehouse"),
             ("Bronze Fact File", "Files/Bronze/leatt_ecommerce_transactions_2m.parquet"),
-            ("Data Pipeline", "pl_leatt_million_row_lakehouse_load"),
+            ("Data Pipeline", "pipeline name redacted for public sharing"),
         ],
         columns=["item", "value"],
     )

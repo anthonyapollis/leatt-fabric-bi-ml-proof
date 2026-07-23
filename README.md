@@ -103,8 +103,8 @@ Generated on 2026-07-17 17:06.
 
 ## Cost control reminder
 
-Suspend Fabric F2 capacity after review to protect Azure credit:
+Suspend Fabric Fabric capacity after review to protect Azure credit:
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```

@@ -36,11 +36,11 @@ This project is now a complete senior BI portfolio case study: website extractio
 ## Azure/Fabric proof
 
 - Resource group: `rg-leatt-fabric-bi-ml`
-- Fabric capacity: `leattfabricf2`
+- Fabric capacity: `fabric-capacity-redacted`
 - Capacity SKU: `F2`
 - Workspace: `Apollis`
 - Lakehouse: `Leatt_BI_ML_Lakehouse`
-- Pipeline: `pl_leatt_million_row_lakehouse_load`
+- Pipeline: `pipeline name redacted for public sharing`
 - Power BI semantic model ID: `9ee6f8a0-aec0-48ff-a44c-15985f3bd4bc`
 - Power BI semantic model URL: `https://app.powerbi.com/groups/e515bafe-7290-4832-ae1d-514be43a9d87/datasets/9ee6f8a0-aec0-48ff-a44c-15985f3bd4bc`
 
@@ -59,16 +59,16 @@ This project is now a complete senior BI portfolio case study: website extractio
 
 ## Cost and handover
 
-Final handover status on 2026-07-17: Fabric F2 capacity `leattfabricf2` was suspended and verified as `Paused`.
+Final handover status on 2026-07-17: Fabric Fabric capacity `fabric-capacity-redacted` was suspended and verified as `Paused`.
 
 Suspend Fabric capacity when review is complete:
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 
 Resume only when refreshing Fabric/Power BI proof:
 
 ```powershell
-az fabric capacity resume --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity resume --resource-group <resource-group> --capacity-name <capacity-name>
 ```

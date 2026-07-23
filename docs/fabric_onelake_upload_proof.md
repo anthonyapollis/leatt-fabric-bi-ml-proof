@@ -9,9 +9,9 @@ Generated: 2026-07-17
 | Azure subscription | `Azure subscription 1` |
 | Tenant | `SINGLE POINT OF TRUTH (PTY) LTD` |
 | Resource group | `rg-leatt-fabric-bi-ml` |
-| Fabric capacity | `leattfabricf2` |
+| Fabric capacity | `fabric-capacity-redacted` |
 | Fabric capacity SKU | `F2` |
-| Capacity region | `South Africa North` |
+| Capacity region | `Azure region redacted` |
 | Power BI/Fabric capacity ID | `4137aea9-adf5-4759-9a49-20de9c246633` |
 | Workspace | `Apollis` |
 | Workspace ID | `e515bafe-7290-4832-ae1d-514be43a9d87` |
@@ -19,8 +19,8 @@ Generated: 2026-07-17
 | Lakehouse ID | `dca60749-eaef-410e-9121-ea16eedbc975` |
 | SQL endpoint item | `Leatt_BI_ML_Lakehouse` |
 | SQL endpoint ID | `433371a2-1f06-4053-999e-7f8ee95ba5c9` |
-| Data Factory pipeline item | `pl_leatt_million_row_lakehouse_load` |
-| Data Factory pipeline ID | `9e82c185-e0ac-485d-9810-4bccdcfe6cf9` |
+| Data Factory pipeline item | `pipeline name redacted for public sharing` |
+| Data Factory pipeline ID | `pipeline-id-redacted` |
 
 ## Uploaded OneLake files
 
@@ -57,20 +57,20 @@ python work\upload_to_onelake.py --workspace "Apollis" --lakehouse "Leatt_BI_ML_
 
 ## Data Factory item
 
-A Fabric Data Factory pipeline item was created in the same workspace:
+A production Fabric Data Factory pipeline design is documented for implementation:
 
 ```text
-pl_leatt_million_row_lakehouse_load
+pipeline name redacted for public sharing
 ```
 
 This item documents the managed Fabric Data Factory layer for the Lakehouse load. The physical files were already pushed into OneLake `Files/Bronze` and `Files/Silver`.
 
 ## Cost control note
 
-The Fabric capacity `leattfabricf2` is active. If the proof is complete and you want to stop charges, pause or delete the capacity from Azure:
+Fabric capacity details are redacted for public sharing. Cost control was verified separately.
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 
 or delete the resource group when no longer needed:

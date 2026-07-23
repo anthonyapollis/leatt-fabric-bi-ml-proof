@@ -8,9 +8,9 @@ Generated: 2026-07-17 21:21 Africa/Johannesburg
 - Workspace ID: `e515bafe-7290-4832-ae1d-514be43a9d87`
 - Semantic model: `Leatt Fabric BI ML Semantic Model 202607171909`
 - Semantic model ID: `9ee6f8a0-aec0-48ff-a44c-15985f3bd4bc`
-- Report name: `Leatt BI ML Executive Report 202607172121`
-- Report ID: `8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e`
-- Report URL: `https://app.powerbi.com/groups/e515bafe-7290-4832-ae1d-514be43a9d87/reports/8c6988a7-fe5e-4fbe-abe9-ce7edd7fd63e/ReportSection`
+- Report name: `Power BI executive report proof redacted`
+- Report ID: `report-id-redacted`
+- Report URL: `https://app.powerbi.com/groups/e515bafe-7290-4832-ae1d-514be43a9d87/reports/report-id-redacted/ReportSection`
 
 ## How It Was Created
 
@@ -49,20 +49,20 @@ The Fabric long-running operation completed successfully:
 
 ## Service Export Evidence
 
-After the report was created, Fabric F2 capacity was briefly resumed and a Power BI export job was tested.
+After the report was created, Fabric Fabric capacity was briefly resumed and a Power BI export job was tested.
 
 - Export status: `Succeeded`
 - Export percent complete: `100`
 - Export caveat: the service export rendered Power BI loading screens rather than useful page visuals, so those blank images were not included in the Git proof package.
 - Browser caveat: opening the report URL in the local browser reached a Power BI sign-in prompt. A signed-in browser session is required for visual review and manual screenshot capture.
 
-Fabric F2 capacity was suspended again after the export and verified as:
+Fabric Fabric capacity was suspended again after the export and verified as:
 
-- Capacity: `leattfabricf2`
+- Capacity: `fabric-capacity-redacted`
 - State: `Paused`
 
 ## Source Definition
 
 Local PBIR report definition folder:
 
-`outputs/fabric_powerbi_reports/Leatt BI ML Executive Report 202607172121.Report`
+`outputs/fabric_powerbi_reports/Power BI executive report proof redacted.Report`

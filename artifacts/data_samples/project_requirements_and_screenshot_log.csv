@@ -3,7 +3,7 @@ Extract ecommerce data from Leatt ZA website,Done,Product catalog CSV and Shopif
 Confirm ecommerce platform,Done,Shopify header products.json cart.js cdn.shopify.com
 Generate millions of ecommerce transaction rows,Done,2M-row parquet and SQLite warehouse
 Push data into Azure Fabric,Done,Leatt_BI_ML_Lakehouse OneLake upload proof
-Use Data Factory layer,Done,pl_leatt_million_row_lakehouse_load and pipeline template
+Use Data Factory layer,Done,pipeline name redacted for public sharing and pipeline template
 Create ERD,Done,leatt_star_schema_erd.png and Mermaid ERD
 Build BI ML reports,Done,Excel PDF DAX forecast ML scores
 Add AB testing and marketing analysis,Done,Growth workbook report and CSVs

@@ -107,11 +107,11 @@ This project is now a complete senior BI portfolio case study: website extractio
 ## Azure/Fabric proof
 
 - Resource group: `rg-leatt-fabric-bi-ml`
-- Fabric capacity: `leattfabricf2`
+- Fabric capacity: `fabric-capacity-redacted`
 - Capacity SKU: `F2`
 - Workspace: `Apollis`
 - Lakehouse: `Leatt_BI_ML_Lakehouse`
-- Pipeline: `pl_leatt_million_row_lakehouse_load`
+- Pipeline: `pipeline name redacted for public sharing`
 - Power BI semantic model ID: `{metrics['dataset_id']}`
 - Power BI semantic model URL: `{metrics['dataset_url']}`
 
@@ -133,13 +133,13 @@ This project is now a complete senior BI portfolio case study: website extractio
 Suspend Fabric capacity when review is complete:
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 
 Resume only when refreshing Fabric/Power BI proof:
 
 ```powershell
-az fabric capacity resume --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity resume --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 """,
         encoding="utf-8",
@@ -206,7 +206,7 @@ def write_pdf(metrics: dict[str, str]) -> Path:
             Spacer(1, 0.4 * cm),
             Paragraph("Handover", styles["Heading1"]),
             Paragraph("GitHub proof: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof", styles["BodyText"]),
-            Paragraph("Suspend Fabric F2 capacity after review to protect remaining Azure credit.", styles["BodyText"]),
+            Paragraph("Suspend Fabric Fabric capacity after review to protect remaining Azure credit.", styles["BodyText"]),
         ]
     )
     SimpleDocTemplate(str(path), pagesize=landscape(A4), rightMargin=1 * cm, leftMargin=1 * cm, topMargin=1 * cm, bottomMargin=1 * cm).build(story)
@@ -286,7 +286,7 @@ def make_pptx(metrics: dict[str, str]) -> Path:
         ("Power BI Executive Overview", "", "powerbi_executive_overview.png"),
         ("ML Return Risk Monitoring", "", "powerbi_ml_monitoring.png"),
         ("AI Commerce Command Center", "", "ai_commerce_command_center.png"),
-        ("Final Handover", "GitHub: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof\nSuspend Fabric F2 capacity after review.\nUse the master Excel and dossier as project handover artifacts.", None),
+        ("Final Handover", "GitHub: https://github.com/anthonyapollis/leatt-fabric-bi-ml-proof\nSuspend Fabric Fabric capacity after review.\nUse the master Excel and dossier as project handover artifacts.", None),
     ]
     image_files = [s[2] for s in slides if s[2]]
     with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as z:
@@ -356,7 +356,7 @@ def write_html_index(metrics: dict[str, str]) -> Path:
     <h2>What the data tells us</h2>
     <ul>{story}</ul>
     <h2>Cost control</h2>
-    <p>After review, suspend Fabric capacity: <code>az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2</code></p>
+    <p>After review, suspend Fabric capacity: <code>az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name></code></p>
   </main>
 </body>
 </html>""",
@@ -391,18 +391,18 @@ def write_handover_docs(metrics: dict[str, str]) -> list[Path]:
     cost.write_text(
         """# Fabric Cost Control And Handover
 
-The Fabric F2 capacity is the main ongoing cost item. Keep it running only while proving or refreshing the project.
+The Fabric Fabric capacity is the main ongoing cost item. Keep it running only while proving or refreshing the project.
 
 Suspend:
 
 ```powershell
-az fabric capacity suspend --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity suspend --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 
 Resume:
 
 ```powershell
-az fabric capacity resume --resource-group rg-leatt-fabric-bi-ml --capacity-name leattfabricf2
+az fabric capacity resume --resource-group <resource-group> --capacity-name <capacity-name>
 ```
 
 Recommended next production hardening:
